@@ -9,10 +9,10 @@ import OpenInBrowser from '@mui/icons-material/OpenInBrowser';
 import Stack from '@mui/material/Stack';
 
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, index }) {
   return (
-    <Grid xs={12} sm={6} md={4} key={project.id}>
-      <Paper elevation={3}>
+   
+      <Paper elevation={3} key={`project-${index}`} >
         <img 
           className='projectCardImg'
           src={project.thumbnailUrl}
@@ -34,7 +34,7 @@ export default function ProjectCard({ project }) {
 
 
       </Paper>
-    </Grid>
+  
   
   );
   

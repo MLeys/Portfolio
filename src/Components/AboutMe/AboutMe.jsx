@@ -1,10 +1,11 @@
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Unstable_Grid2'; 
+import Box from '@mui/material/Box'
 
 
 function AboutMe() {
   return ( 
-    <Typography marginX={2} textAlign='left'>
+    <Box marginX={2} textAlign='left'>
       <Typography textAlign='left'>
         Hi! I am a Full Stack Software Engineer with 15+ years of experience
         in creating and implementing solutions to solve business problems. 
@@ -27,14 +28,7 @@ function AboutMe() {
         with friends or family, attend symphonies or any live music for that manner, and 
         helping others whenever possible.
       </Typography>
-    </Typography>
-
-
-
-
-  
-
- 
+    </Box>
    );
 }
 
