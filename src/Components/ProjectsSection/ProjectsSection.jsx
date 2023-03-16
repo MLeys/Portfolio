@@ -5,9 +5,24 @@ import Grid from '@mui/material/Unstable_Grid2';
 import ProjectCard from '../ProjectCard/ProjectCard';
 
 const projects = [
-  {id: 1, name: "Project 1", description: "First project haahah"},
-  {id: 2, name: "Project 2", description: "Second project with skills blagh"},
-  {id: 3, name: "Project 3", description: "last project that had blag and blah and ..."}
+  {
+    id: 1, 
+    title: "Project 1", 
+    description: "First project haahah", 
+    humbnailUrl: "https://imgur.com/TjSIYbx.jpg"
+  },
+  {
+    id: 2, 
+    title: "Project 2", 
+    description: "Second project with skills blagh", 
+    thumbnailUrl: "https://imgur.com/TjSIYbx.jpg"
+  },
+  {
+    id: 3, 
+    title: "Project 3", 
+    description: "last project that had blag and blah and ...", 
+    thumbnailUrl: "https://imgur.com/TjSIYbx.jpg"
+  }
 ]
 
 function ProjectsSection() {
