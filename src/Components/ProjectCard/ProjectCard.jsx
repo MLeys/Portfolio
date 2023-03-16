@@ -9,8 +9,7 @@ import OpenInBrowser from '@mui/icons-material/OpenInBrowser';
 import Stack from '@mui/material/Stack';
 
 
-export default function ProjectCard({project}) {
-  console.log(project.title, "PROJECT")
+export default function ProjectCard({ project }) {
   return (
     <Grid xs={12} sm={6} md={4} key={project.id}>
       <Paper elevation={3}>

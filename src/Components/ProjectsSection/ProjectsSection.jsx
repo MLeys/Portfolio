@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "./ProjectsSection.css"
 import Grid from '@mui/material/Unstable_Grid2';
 
 import ProjectCard from '../ProjectCard/ProjectCard';
@@ -30,13 +30,14 @@ const projects = [
 
 function ProjectsSection() {
   return ( 
-    <Grid container spacing={{ xs: 2, md: 3 }} >
-      {projects.map((project, index) => (
-     
-          <ProjectCard project={project} />
-        
-      ))}
-    </Grid>
+    <div className='projectsSection section'>
+      <Grid container spacing={{ xs: 2, md: 3 }} >
+        {projects.map((project, index) => (
+            <ProjectCard project={project} />
+        ))}
+      </Grid>
+    </div>
+
    );
 }
 
