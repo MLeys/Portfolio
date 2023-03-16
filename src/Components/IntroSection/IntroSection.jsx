@@ -20,17 +20,17 @@ function IntroSection() {
         <Grid xs={12} md={6} >
           <img  
             src='https://imgur.com/g04SEb6.png'
-            style={{ width: '100%', borderRadius: '25%', margin: ".5rem" }}
+            style={{ width: '90%', borderRadius: '25%', margin: ".5rem" }}
           />
-          <Box>
-            Contact buttons  and links here
-          </Box>
         </Grid>
         <Grid xs={12} md={6}>
           <AboutMe />
         </Grid>
-   
+        <Grid xs={12} marginY={3}>
+          ==========    Contact links / buttons here  ===========
         </Grid>
+   
+       </Grid>
 
   
     </div>

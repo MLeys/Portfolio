@@ -19,7 +19,8 @@ function AboutMe() {
       
       <Typography textAlign='left'> 
         I thrive on solving business problems by developing elegant solutions working 
-        in and outside of a team environment.
+        in and outside of a team environment. If I do not know immdeiately how to solve a problem
+        I gaurentee I will find it, and in a timely manner!
       </Typography>
       <Typography textAlign='left'>
         Outside of the office I love to play team sports, camp and hike, fish, play games
