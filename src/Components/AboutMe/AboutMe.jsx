@@ -9,6 +9,7 @@ function AboutMe() {
       <Typography textAlign='left'>
         Hi! I am a Full Stack Software Engineer with 15+ years of experience
         in creating and implementing solutions to solve business problems. 
+        Thrive on growth, learning, and improvement.
       </Typography>
       <Typography textAlign='left'>
         I firmly believe in personal responsibility and accountability and hold myself to 

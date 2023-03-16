@@ -7,8 +7,8 @@ import AboutMe from '../AboutMe/AboutMe';
 function IntroSection() {
   return ( 
     <div className='introSection section'>
-      <Typography variant='h3' component='h2' marginY={2}>
-        About Me
+      <Typography variant='h5' component='h2' marginY={2} paddingTop={2}>
+        A little introduction...
       </Typography>
       <Grid 
         container 
