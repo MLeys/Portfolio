@@ -10,7 +10,8 @@ function LandingContent() {
         color="inherit" 
         variant="h2"
         sx={{
-          letterSpacing: '.5rem' 
+          mt: {xs: 8, sm:0},
+          letterSpacing: '.25rem' 
         }}
       >
         Michael Leys
@@ -19,8 +20,8 @@ function LandingContent() {
         color="inherit"
         variant="h5"
         sx={{ 
-          mb: 4, 
-          mt: { xs: 4, sm: 6 }, 
+          mb: { xs: 4, sm: 8 },
+          mt: { xs: 4, sm: 8 }, 
           letterSpacing: '.5rem' 
         }}
       >
@@ -30,14 +31,21 @@ function LandingContent() {
         color="secondary"
         variant="contained"
         size="large"
-        component="a"
+        
         href="#projects"
-        sx={{ minWidth: 150 }}
+        sx={{ minWidth: 100 }}
       >
         Projects
       </Button>
-      <Typography variant="body2" color="inherit" sx={{ mt: 2 }}>
-        Passion, Persistence, Personal responsibility
+      <Typography
+        variant="body2" 
+        color="inherit" 
+        sx={{ mt: 4 }}
+      >
+        Growth, Determination, Personal responsibility
+      </Typography>
+      <Typography variant="body1" color="inherit" >
+        
       </Typography>
     </div>
   );

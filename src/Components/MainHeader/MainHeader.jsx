@@ -13,6 +13,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Stack from '@mui/material/Stack'
+import theme from '../../theme';
 
 
 const pageSections = ['About', 'Technologies', 'Projects', ];
@@ -38,7 +39,7 @@ function MainHeader() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed" sx={{ backgroundColor: theme.palette.primary.dark}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 {/* Small Screen dropdown menu */}
@@ -50,7 +51,7 @@ function MainHeader() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
             >
-              <MenuIcon />
+              <MenuIcon color={theme.palette.common.white} />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -67,6 +68,7 @@ function MainHeader() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
+                color: theme.palette.common.white,
                 display: { xs: 'block', md: 'none' },
               }}
             >
@@ -79,9 +81,10 @@ function MainHeader() {
           </Box>
         {/* small screen center title */}
           <Typography
-            variant="h5"
+            variant="h6"
             noWrap
             component="h2"
+            color={theme.palette.common.white}
             sx={{
               mr: 2,
               display: { xs: 'flex', sm: 'none' },
@@ -90,7 +93,7 @@ function MainHeader() {
               letterSpacing: '.2rem',
             }}
           >
-            Mike Leys
+            Michael Leys
           </Typography>
 {/* Section Links in Header */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
@@ -117,9 +120,10 @@ function MainHeader() {
                 <Typography
                   variant="h6"
                   component="h2"
+                  color={theme.palette.common.white}
                   sx={{ display: { xs: 'none', sm: 'flex'} }}
                 >
-                  Mike Leys
+                  Michael Leys
                 </Typography>
                 
                 <Typography

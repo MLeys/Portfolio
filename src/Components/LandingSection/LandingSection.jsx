@@ -10,7 +10,9 @@ const LandingSectionLayout = styled('section')(({ theme }) => ({
   position: 'relative',
   display: 'flex',
   alignItems: 'center',
+  
   [theme.breakpoints.up('sm')]: {
+    
     height: '80vh',
     minHeight: 500,
     maxHeight: 1300,
@@ -32,6 +34,7 @@ const backgroundImage =
   'https://imgur.com/MrxUPHp.png';
 
 const sxBackground = {
+  marginTop: 7,
   backgroundImage: `url(${backgroundImage})`,
   backgroundColor: '#4d2e00', 
   backgroundPosition: 'center',
@@ -44,7 +47,7 @@ function LandingSection() {
       <Container 
         sx={{
           mt: 3,
-          mb: 14,
+          mb: 10,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
