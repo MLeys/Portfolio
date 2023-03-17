@@ -3,7 +3,7 @@ import "./ProjectsSection.css";
 import { 
   RootContainer,
   ImagesWrapper,
-  ImageWrapper,
+  ImageIconButton,
   ImageButton,
   ImageSrc,
   ImageBackdrop,
@@ -16,8 +16,13 @@ import { styled, css } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Unstable_Grid2';
 import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
 
 import ProjectCard from '../ProjectCard/ProjectCard';
+
+
+
+
 
 
 
@@ -48,9 +53,74 @@ function ProjectsSection() {
   return (
     <RootContainer component="section">
       <Typography variant="h4" marked="center" align="center" component="h2">
-        For all tastes and all desires
+        Projects
       </Typography>
-      <ImagesWrapper>
+      <Box sx={{ mt: 8, display: 'flex', flexWrap: 'wrap' }}>
+        {projects.map((project) => (
+
+          <ImageIconButton
+            key={project.title}
+            style={{
+              width: '35%',
+            }}
+          >
+          
+            <Box
+              sx={{
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                top: 0,
+                bottom: 0,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundImage: `url(${project.thumbnailUrl})`,
+              }}
+            />
+            
+            <ImageBackdrop />
+                      
+            
+
+            {/* Stuff inside button */}
+            <Box
+              sx={{
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                top: 0,
+                bottom: 0,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'common.white',
+              }}
+            >
+        
+              <ImageTitle >
+                <Typography
+                  component="h4"
+                  variant="h4"
+                  color="inherit"
+                >
+                  {project.title}
+                 
+                  <ImageMarked></ImageMarked>
+                  </Typography>
+              </ImageTitle>
+            </Box>
+
+          </ImageIconButton>
+        ))}
+
+      </Box>
+
+      <Typography>
+        outside button
+      </Typography>
+
+
+      {/* <ImagesWrapper>
         {projects.map((project) => (
           <ImageWrapper
             key={project.title}
@@ -58,7 +128,7 @@ function ProjectsSection() {
               width: '30%'
             }}
           >
-            <ImageSrc url={project.thumbnailUrl} />
+            <ImageSrc src={project.thumbnailUrl} />
             <ImageBackdrop className="imageBackdrop" />
             <ImageButton className="imageButton">
               <ImageTitle
@@ -72,7 +142,7 @@ function ProjectsSection() {
             </ImageButton>
           </ImageWrapper>
         ))}
-      </ImagesWrapper>
+      </ImagesWrapper> */}
     </RootContainer>
   );
 

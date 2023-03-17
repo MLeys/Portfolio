@@ -13,7 +13,7 @@ export const ImagesWrapper = styled('div')(({ theme }) => ({
   flexWrap: "wrap",
 }));
 
-export const ImageWrapper = styled('div')(({ theme }) => ({
+export const ImageIconButton = styled('div')(({ theme }) => ({
   position: "relative",
   display: "block",
   padding: 0,
@@ -27,15 +27,28 @@ export const ImageWrapper = styled('div')(({ theme }) => ({
   "&:hover": {
     zIndex: 1
   },
-  "&:hover $imageBackdrop": {
-    opacity: 0.15
+  '&:hover .imageBackdrop': {
+    opacity: 0.15,
   },
-  "&:hover $imageMarked": {
-    opacity: 0
+  '&:hover .imageMarked': {
+    opacity: 0,
   },
-  "&:hover $imageTitle": {
-    border: "4px solid currentColor"
-  }
+  '&:hover .imageTitle': {
+    border: '4px solid currentColor',
+  },
+  '& .imageTitle': {
+    position: 'relative',
+    padding: `${theme.spacing(2)} ${theme.spacing(4)} 14px`,
+  },
+  '& .imageMarked': {
+    height: 3,
+    width: 18,
+    background: theme.palette.common.white,
+    position: 'absolute',
+    bottom: -2,
+    left: 'calc(50% - 9px)',
+    transition: theme.transitions.create('opacity'),
+  },
 }));
 
 export const ImageButton = styled('div')(({ theme }) => ({
@@ -68,7 +81,10 @@ export const ImageBackdrop = styled('div')(({ theme }) => ({
   bottom: 0,
   background: theme.palette.common.black,
   opacity: 0.5,
-  transition: theme.transitions.create("opacity")
+  transition: theme.transitions.create("opacity"),
+  "&:hover": {
+    opacity: 0.15
+  },
 }));
 
 export const ImageTitle = styled('div')(({ theme }) => ({
@@ -76,7 +92,7 @@ export const ImageTitle = styled('div')(({ theme }) => ({
   padding: `${theme.spacing(2)}px ${theme.spacing(4)}px 14px`,
   '&:hover': {
     border: "4px solid currentColor"
-  }
+  },
 }));
 
 export const ImageMarked = styled('div')(({ theme }) => ({
@@ -86,7 +102,10 @@ export const ImageMarked = styled('div')(({ theme }) => ({
   position: "absolute",
   bottom: -2,
   left: "calc(50% - 9px)",
-  transition: theme.transitions.create("opacity")
+  transition: theme.transitions.create("opacity"),
+  "&:hover": {
+    opacity: 0
+  },
 }));
 
 export const Images = styled('div')(({ theme }) => ({
