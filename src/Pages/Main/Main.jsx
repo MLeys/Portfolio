@@ -12,15 +12,12 @@ import LandingSection from '../../Components/LandingSection/LandingSection';
 function Main() {
   return (
     <div className='mainPage'>
-      
       <MainHeader />
-      <Container  sx={{ marginY: 5}}>
-        <LandingSection />
-        <IntroSection />
-        <TechSection />
-        <ProjectsSection />
+      <LandingSection />
+      <IntroSection />
+      <TechSection />
+      <ProjectsSection />
 
-      </Container>
       {/* <Home /> */}
     </div>
     );
