@@ -40,7 +40,7 @@ function MainHeader() {
 
   return (
     <AppBar position="fixed" sx={{ backgroundColor: theme.palette.primary.dark}}>
-      <Container maxWidth="xl">
+      <Container maxWidth="100%">
         <Toolbar disableGutters>
 {/* Small Screen dropdown menu */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none' } }}>

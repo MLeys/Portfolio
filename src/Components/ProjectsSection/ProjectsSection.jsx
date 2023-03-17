@@ -1,9 +1,25 @@
 import React from 'react';
-import "./ProjectsSection.css"
+import "./ProjectsSection.css";
+import { 
+  RootContainer,
+  ImagesWrapper,
+  ImageWrapper,
+  ImageButton,
+  ImageSrc,
+  ImageBackdrop,
+  ImageTitle,
+  ImageMarked,
+  Images
+} from '../StyledComps/StyledComps';
+import { styled, css } from '@mui/material/styles'
+
+import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Unstable_Grid2';
+import Container from '@mui/material/Container';
 
 import ProjectCard from '../ProjectCard/ProjectCard';
-import { Typography } from '@mui/material';
+
+
 
 const projects = [
   {
@@ -29,18 +45,55 @@ const projects = [
 
 
 function ProjectsSection() {
-  return ( 
-    <div className='projectsSection section' id='projects'>
-      <Grid container spacing={{ xs: 2, md: 3 }}  >
-        {projects.map((project, index) => (
-          <Grid display="flex" justifyContent="center" alignItems="center" xs={12} sm={6} md={4} key={`projectGrid-${index}`}>
-            <ProjectCard project={project} index={index}/>
-          </Grid>
+  return (
+    <RootContainer component="section">
+      <Typography variant="h4" marked="center" align="center" component="h2">
+        For all tastes and all desires
+      </Typography>
+      <ImagesWrapper>
+        {projects.map((project) => (
+          <ImageWrapper
+            key={project.title}
+            style={{
+              width: '30%'
+            }}
+          >
+            <ImageSrc url={project.thumbnailUrl} />
+            <ImageBackdrop className="imageBackdrop" />
+            <ImageButton className="imageButton">
+              <ImageTitle
+                component="h3"
+                variant="h6"
+                color="inherit"
+              >
+                {project.title}
+                <div className="imageMarked" />
+              </ImageTitle>
+            </ImageButton>
+          </ImageWrapper>
         ))}
-      </Grid>
-    </div>
+      </ImagesWrapper>
+    </RootContainer>
+  );
 
-   );
+
+
+
+
+
+
+  // return ( 
+  //   <Container className='projectsContainer Container' id='projects'>
+  //     <Grid container spacing={{ xs: 2, md: 3 }}  >
+  //       {projects.map((project, index) => (
+  //         <Grid display="flex" justifyContent="center" alignItems="center" xs={12} sm={6} md={4} key={`projectGrid-${index}`}>
+  //           <ProjectCard project={project} index={index}/>
+  //         </Grid>
+  //       ))}
+  //     </Grid>
+  //   </Container>
+
+  //  );
 }
 
 export default ProjectsSection;
