@@ -5,27 +5,7 @@ import ButtonBase from '@mui/material/ButtonBase';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { ImageBackdrop, ImageButton } from '../StyledComps/StyledComps';
-
-const projects = [
-  {
-    id: 1, 
-    title: "Project 1", 
-    description: "First project haahah", 
-    url: "https://imgur.com/TjSIYbx.jpg",
-  },
-  {
-    id: 2, 
-    title: "Project 2", 
-    description: "Second project with skills blagh", 
-    url: "https://imgur.com/RjtfRr1.png",
-  },
-  {
-    id: 3, 
-    title: "Project 3", 
-    description: "last project that had blag and blah and ...", 
-    url: "https://imgur.com/c0BFXCj.png",
-  }
-]
+import { Projects } from '../../lists/projects';
 
 
 
@@ -36,7 +16,7 @@ export default function ProjectsDisplay() {
         Projects
       </Typography>
       <Box sx={{ mt: 8, display: 'flex', flexWrap: 'wrap' }}>
-        {projects.map((project) => (
+        {Projects.map((project) => (
           <ImageButton
             key={project.title}
             style={{

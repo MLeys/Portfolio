@@ -2,7 +2,6 @@ import React from 'react';
 import { Container } from '@mui/material';
 
 import MainHeader from '../../Components/MainHeader/MainHeader';
-import ProjectsSection from '../../Components/ProjectsSection/ProjectsSection';
 import IntroSection from '../../Components/IntroSection/IntroSection';
 import TechSection from '../../Components/TechSection/TechSection';
 import ProjectsDisplay from '../../Components/ProjectsDisplay/ProjectsDisplay';
