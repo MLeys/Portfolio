@@ -1,5 +1,7 @@
-import './App.css'
-
+import './App.css';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import theme from './theme';
 
 import Main from './Pages/Main/Main'
 
@@ -7,9 +9,11 @@ function App() {
 
 
   return (
-    <div className="App">
-      <Main />
-    </div>
+    <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Main />
+    </ThemeProvider>
+
   )
 }
 

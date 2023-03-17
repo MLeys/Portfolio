@@ -30,7 +30,7 @@ const projects = [
 
 function ProjectsSection() {
   return ( 
-    <div className='projectsSection section'>
+    <div className='projectsSection section' id='projects'>
       <Grid container spacing={{ xs: 2, md: 3 }}  >
         {projects.map((project, index) => (
           <Grid display="flex" justifyContent="center" alignItems="center" xs={12} sm={6} md={4} key={`projectGrid-${index}`}>
