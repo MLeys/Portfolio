@@ -32,7 +32,7 @@ export default function ProjectsDisplay() {
                 bottom: 0,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center 40%',
-                backgroundImage: `url(${project.url})`,
+                backgroundImage: `url(${project.thumbnailUrl})`,
               }}
             />
             <ImageBackdrop className="projectBackdrop" />
