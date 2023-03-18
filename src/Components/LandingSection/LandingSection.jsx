@@ -70,7 +70,7 @@ function LandingSection() {
         <Background sx={sxBackground} />
         <Box
           component="img"
-          src="/static/themes/onepirate/productHeroArrowDown.png"
+          src=""
           height="16"
           width="12"
           alt="arrow down"

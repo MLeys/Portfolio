@@ -15,6 +15,7 @@ export const ImageBackdrop = styled('div')(({ theme }) => ({
   transition: theme.transitions.create('opacity'),
 }));
 
+
 export const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
   display: 'block',
@@ -48,6 +49,47 @@ export const ImageButton = styled(ButtonBase)(({ theme }) => ({
     position: 'absolute',
     bottom: -2,
     left: 'calc(50% - 9px)',
+    transition: theme.transitions.create('opacity'),
+  },
+}));
+
+export const IconBackdrop = styled('div')(({ theme }) => ({
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+  background: theme.palette.common.black,
+  opacity: 0.2,
+  
+}));
+
+
+export const IconButton = styled(ButtonBase)(({ theme }) => ({
+  position: 'relative',
+  display: 'block',
+  padding: 0,
+  borderRadius: 0,
+  height: '40vh',
+  [theme.breakpoints.down('sm')]: {
+    width: '25% !important',
+    height: 100,
+  },
+  '&:hover': {
+    zIndex: 1,
+  },
+  '&:hover .iconBackdrop': {
+    opacity: 0.5,
+  },
+  '&:hover .iconTitle': {
+    
+    opacity: 1,
+    fontSize: 30,
+    fontWeight: 700,
+  },
+  '& .iconTitle': {
+    position: 'relative',
+    padding: `${theme.spacing(1)} ${theme.spacing(.5)} 10px`,
     transition: theme.transitions.create('opacity'),
   },
 }));

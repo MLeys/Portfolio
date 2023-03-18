@@ -11,8 +11,8 @@ import { Projects } from '../../lists/projects';
 
 export default function ProjectsDisplay() {
   return (
-    <Container component="section" sx={{ mt: 8, mb: 4 }}>
-      <Typography variant="h4" marked="center" align="center" component="h2">
+    <Container component="section" sx={{ mt: 8, mb: 4 }} className='section'>
+      <Typography variant="h3" marked="center" align="center" component="h2">
         Projects
       </Typography>
       <Box sx={{ mt: 8, display: 'flex', flexWrap: 'wrap' }}>

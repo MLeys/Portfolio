@@ -1,14 +1,14 @@
 import Box from '@mui/material/Box'
 
 function TechIcon({ tech, index }) {
-  console.log(tech.name, "techicon")
+  console.log(tech.title, "techicon")
   return ( 
     <Box key={`techIcon-${index}`} >
       <img
         height='50'
-        src={tech.img} 
+        src={tech.url} 
       />
-      {tech.name}
+      {/* {tech.title} */}
     </Box>
     
    );

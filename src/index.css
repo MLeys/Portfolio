@@ -3,4 +3,14 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  color: whitesmoke
+  
+
+}
+body {
+  background-color: #1e2424;
+}
+
+.section {
+  min-height: 80vh;
 }

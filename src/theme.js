@@ -76,7 +76,7 @@ const theme = {
     background: {
       ...baseTheme.palette.background,
       default: baseTheme.palette.common.white,
-      placeholder: grey[200],
+      placeholder: '#464f4f',
     },
   },
   typography: {

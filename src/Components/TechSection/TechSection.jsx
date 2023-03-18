@@ -1,7 +1,8 @@
-import Reach from 'react'
+import React from 'react'
 import TechList from "../TechList/TechList";
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
+import { Technologies } from '../../lists/technologies'
 
 import TechIcon from "../TechIcon/TechIcon";
 import { Chip, Divider } from '@mui/material';
@@ -18,7 +19,7 @@ function TechSection() {
       </Divider>
 
       <Grid container justifyContent='center' spacing={8}>
-        {TechList.map((tech, index) => (
+        {Technologies.map((tech, index) => (
           <Grid display="flex" justifyContent="center" alignItems="center" xs={2} sm={1} lg={.5}>
             <TechIcon tech={tech} index={index} />
           </Grid>
