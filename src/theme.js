@@ -2,17 +2,32 @@ import { createTheme } from '@mui/material/styles';
 import { red, grey, green } from '@mui/material/colors';
 
 const baseTheme = createTheme({
+  divider: {
+    color: '#BDBDBD'
+  },
+
 
   status: {
     danger: '#ff6600'
   },
   palette: {
-    
-    primary: {
-      main: '#337084',
-      light: '#6c8b93',
-      darker: '#003547'
+    text: {
+      main: '#FFFFFF'
     },
+    primary: {
+      main: '#009688',
+      light: '#B2DFDB',
+      darker: '#00796B',
+      contrastText: '#212121',
+
+    },
+    secondary: {
+      main: '#607D8B',
+      light: '#bee4e1',
+      dark: '#0d7b6c',
+      contrastText: '#e5f4f3'
+    },
+    
     warning: {
       main: '#ffc071',
       dark: '#ffb25e',

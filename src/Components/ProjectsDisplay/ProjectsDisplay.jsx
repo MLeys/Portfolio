@@ -11,7 +11,7 @@ import { Projects } from '../../lists/projects';
 
 export default function ProjectsDisplay() {
   return (
-    <Container component="section" sx={{ mt: 8, mb: 4 }} className='section'>
+    <Container component="section" sx={{ mt: 8, mb: 4 }} className='section' id='projects'>
       <Typography variant="h3" marked="center" align="center" component="h2">
         Projects
       </Typography>
