@@ -27,17 +27,18 @@ const sxBackground = {
 
 function TechDisplay() {
   return ( 
-    <Container component="section" className="section" >
+    <Container className="section" >
       <Typography variant='h3' component='h3' m={5} p={1} color='common.white'>
         Experience
       </Typography>
-      <Box sx={{ mt: 4, display: 'flex', flexWrap: 'wrap' }}>
+      <Box sx={{ mt: 4, display: 'flex', flexWrap: 'wrap' , justifyContent: 'center'}}>
         {Technologies.map((tech, index) => (
           <IconButton
             key={tech.title}
             style={{
-              width: '12.5%',
-              height: 100,
+              width: 80,
+              height: 80,
+              margin: 2,
             }}
           >
             <Box
@@ -47,10 +48,13 @@ function TechDisplay() {
                 right: 0,
                 top: 0,
                 bottom: 0,
-                
+                px: 2,
+                py: 2,
+                my: 0,
+                mx: 0,
                 backgroundSize: 'cover',
-                backgroundPosition: 'center 40%',
-                backgroundImage: `url(${tech.url})`,
+                backgroundPosition: 'center',
+                backgroundImage: `url(${tech.url})`,               
               }}
             />
             <IconBackdrop className="iconBackdrop" />
@@ -68,12 +72,11 @@ function TechDisplay() {
               }}
             >
               <Typography
-                component="h2"
-                variant="h5"
+                component="body2"
+                variant="body2"
                 color="common.white"
                 className="iconTitle"
                 sx={{ opacity: 0}}
-                
               >
                 {tech.title}
         

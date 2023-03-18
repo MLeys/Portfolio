@@ -60,12 +60,12 @@ export const Technologies = [
   {
     title: 'Java',
     level: 'Advanced Beginner',
-    url: `${BASEURL}java/java-original.svg`
+    url: `${BASEURL}java/java-original-wordmark.svg`
   },
   {
     title: 'Python',
     level: 'Advanced Beginner',
-    url: `${BASEURL}python/python-original.svg`
+    url: `${BASEURL}python/python-original-wordmark.svg`
   },
   {
     title: 'Rust',
@@ -75,12 +75,12 @@ export const Technologies = [
   {
     title: 'HTML',
     level: 'Advanced Beginner',
-    url: `${BASEURL}html5/html5-original.svg`
+    url: `${BASEURL}html5/html5-original-wordmark.svg`
   },
   {
     title: 'CSS',
     level: 'Advanced Beginner',
-    url: `${BASEURL}css3/css3-original.svg`
+    url: `${BASEURL}css3/css3-original-wordmark.svg`
   },
   {
     title: 'TypeScript',
@@ -95,12 +95,12 @@ export const Technologies = [
   {
     title: 'React.js',
     level: 'Intermediate',
-    url: `${BASEURL}react/react-original.svg`
+    url: `${BASEURL}react/react-original-wordmark.svg`
   },
   {
     title: 'Bootstrap',
     level: 'Advanced Beginner',
-    url: `${BASEURL}bootstrap/bootstrap-original.svg`
+    url: `${BASEURL}bootstrap/bootstrap-original-wordmark.svg`
   },
   {
     title: 'Semantic UI',
@@ -125,22 +125,22 @@ export const Technologies = [
   {
     title: 'Mongo DB',
     level: 'Intermediate',
-    url: `${BASEURL}mongodb/mongodb-original.svg`
+    url: `${BASEURL}mongodb/mongodb-original-wordmark.svg`
   },
   {
     title: 'Postgre SQL',
     level: 'Advanced Beginner',
-    url: `${BASEURL}postgresql/postgresql-original.svg`
+    url: `${BASEURL}postgresql/postgresql-original-wordmark.svg`
   },
   {
     title: 'SQLite',
     level: 'Advanced Beginner',
-    url: `${BASEURL}sqlite/sqlite-original.svg`
+    url: `${BASEURL}sqlite/sqlite-original-wordmark.svg`
   },
   {
     title: 'MySQL',
     level: 'Beginner',
-    url: `${BASEURL}mysql/mysql-original.svg`
+    url: `${BASEURL}mysql/mysql-original-wordmark.svg`
   },
   {
     title: 'Mongoose',
@@ -151,16 +151,16 @@ export const Technologies = [
     title: 'Express',
     level: 'Intermediate',
     url: `${BASEURL}express/express-original.svg`
-  },
+  },         
   {
     title: 'Git',
     level: 'Advanced',
-    url: `${BASEURL}git/git-original.svg`
+    url: `${BASEURL}git/git-original-wordmark.svg`
   },
   {
     title: 'GitHub',
     level: 'Advanced',
-    url: `${BASEURL}github/github-original.svg`
+    url: `${BASEURL}github/github-original-wordmark.svg`
   },
   
   {
@@ -176,13 +176,28 @@ export const Technologies = [
   {
     title: 'VS Code',
     level: '',
-    url: `${BASEURL}visualstudio/visualstudio-plain.svg`
+    url: `${BASEURL}visualstudio/visualstudio-plain-wordmark.svg`
   },
   {
     title: 'Vim',
     level: '',
     url: `${BASEURL}vim/vim-original.svg`
   },
+
+  {
+    title: 'Docker',
+    level: 'Beginner',
+    url: `${BASEURL}docker/docker-original-wordmark.svg`
+  },
+  {
+    title: 'CodePen',
+    level: 'Intermediate',
+    url: `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codepen/codepen-original-wordmark.svg`
+  },
+
+]
+
+export const Other = [
   {
     title: 'MacOS',
     level: '',
@@ -198,18 +213,4 @@ export const Technologies = [
     level: 'Beginner',
     url: `${BASEURL}bash/bash-original.svg`
   },
-  {
-    title: 'Docker',
-    level: 'Beginner',
-    url: `${BASEURL}docker/docker-original-wordmark.svg`
-  },
-  {
-    title: 'CodePen',
-    level: 'Intermediate',
-    url: `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codepen/codepen-original-wordmark.svg`
-  },
-
 ]
-
-
-export default Technologies;

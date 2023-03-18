@@ -59,9 +59,9 @@ export const IconBackdrop = styled('div')(({ theme }) => ({
   right: 0,
   top: 0,
   bottom: 0,
-  background: theme.palette.common.black,
-  opacity: 0.2,
-  
+  background: '#000',
+  opacity: 0,
+  transition: theme.transitions.create('opacity'),
 }));
 
 
@@ -79,17 +79,26 @@ export const IconButton = styled(ButtonBase)(({ theme }) => ({
     zIndex: 1,
   },
   '&:hover .iconBackdrop': {
-    opacity: 0.5,
+    opacity: 0.15,
   },
   '&:hover .iconTitle': {
     
     opacity: 1,
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: 700,
   },
   '& .iconTitle': {
     position: 'relative',
     padding: `${theme.spacing(1)} ${theme.spacing(.5)} 10px`,
+    transition: theme.transitions.create('opacity'),
+  },
+  '& .projectMarked': {
+    height: 3,
+    width: 18,
+    background: theme.palette.common.white,
+    position: 'absolute',
+    bottom: -2,
+    left: 'calc(50% - 9px)',
     transition: theme.transitions.create('opacity'),
   },
 }));
