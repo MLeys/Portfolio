@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Link from '@mui/material/Link';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -7,16 +7,31 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
+
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import Stack from '@mui/material/Stack'
+import Stack from '@mui/material/Stack';
 import theme from '../../theme';
 
+const sections = [
+  {
+    title: "About",
+    link: "#intro",
+  },
+  {
+    title: "Technologies",
+    link: "#tech"
+  },
+  {
+    title: "Projects",
+    link: "#projects"
+  },
+]
 
-const pageSections = ['About', 'Technologies', 'Projects', ];
+
 const info = ['Resume', 'Contact', ];
 
 function MainHeader() {
@@ -39,10 +54,15 @@ function MainHeader() {
   };
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: theme.palette.primary.dark}}>
+    <AppBar 
+      position="fixed" 
+      sx={{ 
+        backgroundColor: theme.palette.primary.main, 
+        color: theme.palette.primary.contrastText
+      }}
+    >
       <Container maxWidth="100%">
         <Toolbar disableGutters>
-{/* Small Screen dropdown menu */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none' } }}>
             <IconButton
               size="large"
@@ -51,38 +71,32 @@ function MainHeader() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
             >
-              <MenuIcon color={theme.palette.common.white} />
+              <MenuIcon  />
             </IconButton>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{
-                color: theme.palette.common.white,
-                display: { xs: 'block', md: 'none' },
-              }}
+              sx={{ display: { xs: 'block', md: 'none' } }}
             >
-              {pageSections.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {sections.map((page) => (
+                <MenuItem >
+                  <Link 
+                    key={page.title} 
+                    href={page.link} 
+                    variant='subtitle2'
+                    underline='hover'
+                    onClick={handleCloseNavMenu} 
+                  >
+                    {page.title}
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-        {/* small screen center title */}
           <Typography
             variant="h6"
-            noWrap
             component="h2"
             color={theme.palette.common.white}
             sx={{
@@ -95,20 +109,18 @@ function MainHeader() {
           >
             Michael Leys
           </Typography>
-{/* Section Links in Header */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
-            {pageSections.map((page) => (
+            {sections.map((page) => (
               <Button
-                key={page}
+                key={page.title}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
+                href={page.link}
               >
-                {page}
+                {page.title}
               </Button>
             ))}
           </Box>
-
-
           <Box sx={{ flexGrow: 0 }}>
             <Stack direction='row'>
               <Tooltip title="Additional Information">

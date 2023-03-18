@@ -27,7 +27,7 @@ const sxBackground = {
 
 function TechDisplay() {
   return ( 
-    <Container className="section" >
+    <Container className="section" id='tech' >
       <Typography variant='h3' component='h3' m={5} p={1} color='common.white'>
         Experience
       </Typography>

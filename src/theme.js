@@ -132,6 +132,10 @@ const theme = {
       ...baseTheme.typography.subtitle1,
       fontSize: 18,
     },
+    subtitle2: {
+      ...baseTheme.typography.subtitle1,
+      fontSize: 20,
+    },
     body1: {
       ...baseTheme.typography.body2,
       fontWeight: baseTheme.typography.fontWeightRegular,
