@@ -50,7 +50,7 @@ export const Projects = [
     about: "Team project tracking",
     features: [ 
       "Django ", 
-      "",
+      
     ],
     tech: [
       "Mongoose",  

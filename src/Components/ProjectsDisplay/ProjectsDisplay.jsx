@@ -18,21 +18,7 @@ import List from '@mui/material/List';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import ProjectList from '../ProjectList/ProjectList';
 
-const Title = styled(Typography)({
-  fontSize: 16,
-  fontWeight: 'bolder',
-})
 
-
-const CornerIcon = styled(Box)({
-  position: 'absolute',
-  top: 0,
-  right: 0,
-  padding: 3,
-  zIndex: 5,
-  borderRadius: '25%',
-  backgroundColor: theme.palette.orange.dark,
-})
 
 export default function ProjectsDisplay() {
   return (
@@ -45,10 +31,9 @@ export default function ProjectsDisplay() {
         <Grid container mt={5}>
           <ProjectCard project={project} />
           
-          <Grid xs={6}>
+          <Grid xs={12} sm={6}>
             <Typography variant='h6'> {project.description}</Typography>
             <Box >
-              <Title> Title: </Title>
               <ProjectList project={project} />
             </Box>
           </Grid>
@@ -56,11 +41,6 @@ export default function ProjectsDisplay() {
         </Grid>
       ))}
 
-
-
-     
-
-      
     </Container>
   );
 }

@@ -5,8 +5,12 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
 import FolderIcon from '@mui/icons-material/Folder';
+import DescriptionIcon from '@mui/icons-material/Description';
+import BoltIcon from '@mui/icons-material/Bolt';
+import TerminalIcon from '@mui/icons-material/Terminal';
 import styled from '@emotion/styled';
 import theme from '../../theme';
+import { Typography } from '@mui/material';
 
 const ListText = styled(ListItemText) ({
   primaryTypographyProps: {
@@ -24,17 +28,11 @@ const ListText = styled(ListItemText) ({
 
 const CustomList = styled(List) ({
   backgroundColor: theme.palette.background.placeholder,
-  '& .MuiListItemButton-root': {
-    paddingLeft: 0,
-    paddingRight: 0,
-  },
   '& .MuiListItemIcon-root': {
-
     alignContent: 'right',
     justifyContent: 'right',
     alignItems: 'center',
     marginRight: 10,
-    
   },
   '& .MuiSvgIcon-root': {
     fontSize: 30,
@@ -51,39 +49,55 @@ const CustomList = styled(List) ({
     fontWeight: '200',
     color: theme.palette.orange.contrastText,
     textAlign: 'left',
+
   }
 });
 
 export default function ProjectList( { project }) {
+  const techInfo = project.tech.join(', ')
 
   return (
-      <Grid xs={12} md={6} sx={{m: 0, p: 0}}>
-        {/* <ListItem disableGutters disablePadding>
-          <ListItemIcon sx={{m: 2, p: 0, justifyContent: 'right'}}>
-            <FolderIcon />
-          </ListItemIcon>
-          
-          <ListItemText
-            primary="Main Text"
-
-            secondary= "secondary text here"
-
-          />
-        </ListItem> */}
+      
         <CustomList>
           <ListItem disableGutters disablePadding>
             <ListItemIcon>
-              <FolderIcon />
+              <DescriptionIcon />
             </ListItemIcon>
             <ListText
-              primary={
-             "PRIMARY text"
-                         }
-              secondary="SECONDARY text"
+              primary={project.title}
+              secondary={project.about}
             />
           </ListItem>
+          <ListItem disableGutters disablePadding>
+            <ListItemIcon>
+              <BoltIcon />
+            </ListItemIcon>
+            <ListText
+              primary="Features"
+              secondary={
+                project.features.map((f) => (
+                 <Typography textAlign='left'>{f}</Typography>
+                ))
+              }
+            />
+          </ListItem>
+          <ListItem disableGutters disablePadding>
+            <ListItemIcon>
+              <TerminalIcon />
+            </ListItemIcon>
+            <ListText
+              primary="Tech"
+              secondary={techInfo}
+              
+ 
+            />
+          </ListItem>
+
+          <ListItem>
+            links to github and all that stuff
+          </ListItem>
         </CustomList>
-      </Grid>
+     
    
   );
 }

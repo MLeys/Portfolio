@@ -9,7 +9,7 @@ import { styled } from '@mui/material/styles';
 
 function ProjectCard({ project }) {
   return ( 
-    <Grid xs={6}>
+    <Grid xs={12} sm={6}>
       <ImageButton
         key={project.title}
         style={{
