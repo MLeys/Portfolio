@@ -2,6 +2,17 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
+import theme from '../../theme';
+
+export const CornerIcon = styled(Box)({
+  position: 'absolute',
+  top: 0,
+  right: 0,
+  padding: 3,
+  zIndex: 5,
+  borderRadius: '25%',
+  backgroundColor: theme.palette.orange.dark,
+})
 
 export const CenteringBox = styled(Box)({
   position: 'absolute',
@@ -31,7 +42,7 @@ export const Ribbon = styled(Box)({
   position: 'absolute',
   top: '1rem',
   left: '-2rem',
-  backgroundColor: 'red',
+  backgroundColor: theme.palette.primary.dark,
   color: 'white',
   padding: '0.5rem',
   fontSize: '1rem',
@@ -46,16 +57,16 @@ export const Ribbon = styled(Box)({
     top: '-1rem',
     left: 0,
     border: '1rem solid transparent',
-    borderRightColor: 'red',
-  },
-  '&::after': {
-    content: '""',
-    position: 'absolute',
-    bottom: '-1rem',
-    left: 0,
-    border: '1rem solid transparent',
-    borderTopColor: 'red',
-  },
+    borderRightColor: theme.palette.primary.dark,
+   },
+  // '&::after': {
+  //   content: '""',
+  //   position: 'absolute',
+  //   bottom: '-1rem',
+  //   left: 0,
+  //   border: '1rem solid transparent',
+  //   borderTopColor: theme.palette.primary.dark,
+  // },
 });
 
 
@@ -75,9 +86,9 @@ export const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
   display: 'block',
   padding: 0,
-  borderRadius: 0,
+  marginLeft: 20,
   height: '40vh',
-  [theme.breakpoints.down('md')]: {
+  [theme.breakpoints.down('sm')]: {
     width: '100% !important',
     height: 100,
   },
