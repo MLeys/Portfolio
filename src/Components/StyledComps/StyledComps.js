@@ -104,8 +104,8 @@ export const ImageButton = styled(ButtonBase)(({ theme }) => ({
     opacity: 0,
   },
   '&:hover .projectTitle': {
-    color: theme.palette.secondary.dark,
-    background: theme.palette.secondary.light,
+    color: theme.palette.secondary.light,
+    background: theme.palette.secondary.dark,
     border: '4px solid currentColor',
   },
   '& .projectTitle': {

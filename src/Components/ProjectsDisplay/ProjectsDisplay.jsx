@@ -12,16 +12,17 @@ import { Projects } from '../../lists/projects';
 // import { ContrastTwoTone } from '@mui/icons-material';
 import theme from '../../theme';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
+import List from '@mui/material/List';
+
 
 import ProjectCard from '../ProjectCard/ProjectCard';
-import List from '@mui/material/List';
+import ProjectList from '../ProjectList/ProjectList';
 
 const Title = styled(Typography)({
   fontSize: 16,
   fontWeight: 'bolder',
 })
 
-const Bullet = styled(List) 
 
 const CornerIcon = styled(Box)({
   position: 'absolute',
@@ -43,12 +44,12 @@ export default function ProjectsDisplay() {
       {Projects.map((project) => (
         <Grid container mt={5}>
           <ProjectCard project={project} />
-        
+          
           <Grid xs={6}>
             <Typography variant='h6'> {project.description}</Typography>
             <Box >
               <Title> Title: </Title>
-    
+              <ProjectList project={project} />
             </Box>
           </Grid>
 
