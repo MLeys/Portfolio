@@ -15,10 +15,9 @@ export const Projects = [
       "AWS"
     ],
     thumbnailUrl: "https://imgur.com/TjSIYbx.jpg",
-    deploymentUrl: "",
+    deploymentUrl: "https://skills-map.cyclic.app/",
     gitHubUrl: "https://github.com/MLeys/Project-4_SkillMap",
-
-
+    videoUrl: "",
   },
   {
     id: 2, 

@@ -1,12 +1,7 @@
 import { createTheme } from '@mui/material/styles';
-import { red, grey, green } from '@mui/material/colors';
+import { red, grey, green, deepOrange, blue, blueGrey, deepPurple} from '@mui/material/colors';
 
 const baseTheme = createTheme({
-  divider: {
-    color: '#BDBDBD'
-  },
-
-
   status: {
     danger: '#ff6600'
   },
@@ -19,7 +14,6 @@ const baseTheme = createTheme({
       light: '#B2DFDB',
       darker: '#00796B',
       contrastText: '#212121',
-
     },
     secondary: {
       main: '#607D8B',
@@ -27,7 +21,6 @@ const baseTheme = createTheme({
       dark: '#0d7b6c',
       contrastText: '#e5f4f3'
     },
-    
     warning: {
       main: '#ffc071',
       dark: '#ffb25e',
@@ -43,8 +36,29 @@ const baseTheme = createTheme({
       dark: green[700],
     },
     blue: {
-      main: '#006699',
+      light: blue[300],
+      main: blue[700],
+      dark: blue[900],
+      contrastText: blue[50],
     },
+    blueGray: {
+      light: blueGrey[300],
+      main: blueGrey[700],
+      dark: blueGrey[900],
+      contrastText: blueGrey[50],
+    },    
+    orange: {
+      light: deepOrange['A100'],
+      main: deepOrange['A400'],
+      dark: deepOrange[900],
+      contrastText: deepOrange[50],
+    },    
+    purple: {
+      light: deepPurple[400],
+      main: deepPurple['A400'],
+      dark: deepPurple[900],
+      contrastText: deepPurple[50],
+    },    
   },
   typography: {
     fontFamily: "'Source Sans Pro', sans-serif",
