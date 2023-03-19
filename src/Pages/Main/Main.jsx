@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '@mui/material';
+import styled from '@emotion/styled';
 
 import MainHeader from '../../Components/MainHeader/MainHeader';
 import IntroSection from '../../Components/IntroSection/IntroSection';
@@ -8,16 +8,23 @@ import ProjectsDisplay from '../../Components/ProjectsDisplay/ProjectsDisplay';
 import TechDisplay from '../../Components/TechDisplay/TechDisplay';
 
 import LandingSection from '../../Components/LandingSection/LandingSection';
+import theme from '../../theme';
+
+const MainDiv = styled('div') ({
+  backgroundColor: theme.palette.background.main,
+  zIndex: -3,
+})
+
 
 function Main() {
   return (
-    <div className='mainPage'>
+    <MainDiv className='mainPage' >
       <MainHeader />
       <LandingSection />
       <IntroSection />
       <TechDisplay />
       <ProjectsDisplay />
-    </div>
+    </MainDiv>
     );
 }
 

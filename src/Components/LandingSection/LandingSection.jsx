@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container'
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 
 import LandingContent from '../LandingContent/LandingContent';
 
@@ -10,9 +11,8 @@ const LandingSectionLayout = styled('section')(({ theme }) => ({
   position: 'relative',
   display: 'flex',
   alignItems: 'center',
-  
+  zIndex: 0,
   [theme.breakpoints.up('sm')]: {
-    
     height: '80vh',
     minHeight: 500,
     maxHeight: 1300,
@@ -68,11 +68,8 @@ function LandingSection() {
           }}
         />
         <Background sx={sxBackground} />
-        <Box
-          component="img"
-          src=""
-          height="16"
-          width="12"
+        <KeyboardDoubleArrowDownIcon
+          fontSize='large'
           alt="arrow down"
           sx={{ position: 'absolute', bottom: 32 }}
         />

@@ -59,7 +59,10 @@ const baseTheme = createTheme({
       main: deepPurple['A400'],
       dark: deepPurple[900],
       contrastText: deepPurple[50],
-    },    
+    },  
+    background: {
+      main: blueGrey[300],
+    }  
   },
   typography: {
     fontFamily: "'Source Sans Pro', sans-serif",

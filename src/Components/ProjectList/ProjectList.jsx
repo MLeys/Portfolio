@@ -6,11 +6,14 @@ import ListItemText from '@mui/material/ListItemText';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
 import FolderIcon from '@mui/icons-material/Folder';
 import DescriptionIcon from '@mui/icons-material/Description';
+import LaunchIcon from '@mui/icons-material/Launch';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import BoltIcon from '@mui/icons-material/Bolt';
 import TerminalIcon from '@mui/icons-material/Terminal';
 import styled from '@emotion/styled';
 import theme from '../../theme';
 import { Typography } from '@mui/material';
+import Link from '@mui/material/Link';
 
 const ListText = styled(ListItemText) ({
   primaryTypographyProps: {
@@ -50,7 +53,7 @@ const CustomList = styled(List) ({
     color: theme.palette.orange.contrastText,
     textAlign: 'left',
 
-  }
+  },
 });
 
 export default function ProjectList( { project }) {
@@ -58,19 +61,19 @@ export default function ProjectList( { project }) {
 
   return (
       
-        <CustomList>
-          <ListItem disableGutters disablePadding>
+        <CustomList className='customList'>
+          <ListItem disableGutters disablePadding component={Link} href={project.deploymentUrl}>
             <ListItemIcon>
-              <DescriptionIcon />
+              <LaunchIcon />
             </ListItemIcon>
             <ListText
               primary={project.title}
               secondary={project.about}
             />
           </ListItem>
-          <ListItem disableGutters disablePadding>
-            <ListItemIcon>
-              <BoltIcon />
+          <ListItem disableGutters disablePadding component={Link} href={project.gitHubUrl} >
+            <ListItemIcon >
+              <GitHubIcon />
             </ListItemIcon>
             <ListText
               primary="Features"
@@ -88,13 +91,7 @@ export default function ProjectList( { project }) {
             <ListText
               primary="Tech"
               secondary={techInfo}
-              
- 
             />
-          </ListItem>
-
-          <ListItem>
-            links to github and all that stuff
           </ListItem>
         </CustomList>
      
