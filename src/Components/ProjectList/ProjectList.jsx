@@ -54,7 +54,15 @@ const CustomList = styled(List) ({
     textAlign: 'left',
 
   },
+
 });
+
+const CustomListItem = styled(ListItem)({
+  '&:hover .menuListItem':{
+    opacity: 1,
+  }
+
+})
 
 export default function ProjectList( { project }) {
   const techInfo = project.tech.join(', ')
@@ -62,7 +70,7 @@ export default function ProjectList( { project }) {
   return (
       
         <CustomList className='customList'>
-          <ListItem disableGutters disablePadding component={Link} href={project.deploymentUrl}>
+          <CustomListItem className='projectListItem' disableGutters disablePadding component='a' href={project.deploymentUrl}>
             <ListItemIcon>
               <LaunchIcon />
             </ListItemIcon>
@@ -70,8 +78,8 @@ export default function ProjectList( { project }) {
               primary={project.title}
               secondary={project.about}
             />
-          </ListItem>
-          <ListItem disableGutters disablePadding component={Link} href={project.gitHubUrl} >
+          </CustomListItem>
+          <ListItem className='projectListItem' disableGutters disablePadding component='a' href={project.gitHubUrl} >
             <ListItemIcon >
               <GitHubIcon />
             </ListItemIcon>
@@ -84,7 +92,7 @@ export default function ProjectList( { project }) {
               }
             />
           </ListItem>
-          <ListItem disableGutters disablePadding>
+          <ListItem className='projectListItem' disableGutters disablePadding>
             <ListItemIcon>
               <TerminalIcon />
             </ListItemIcon>

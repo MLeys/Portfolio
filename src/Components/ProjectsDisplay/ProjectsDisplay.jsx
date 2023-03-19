@@ -1,23 +1,13 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import LaunchIcon from '@mui/icons-material/Launch';
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import Box from '@mui/material/Box';
-import ButtonBase from '@mui/material/ButtonBase';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-// import { ImageBackdrop, ImageButton, Ribbon, CenteringBox, ImageBox } from '../StyledComps/StyledComps';
-import { Projects } from '../../lists/projects';
-// import { alignProperty } from '@mui/material/styles/cssUtils';
-// import { ContrastTwoTone } from '@mui/icons-material';
-import theme from '../../theme';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
-import List from '@mui/material/List';
 
+import { Projects } from '../../lists/projects';
 
 import ProjectCard from '../ProjectCard/ProjectCard';
 import ProjectList from '../ProjectList/ProjectList';
-
 
 
 export default function ProjectsDisplay() {

@@ -20,9 +20,6 @@ function ProjectCard({ project }) {
         <ImageBackdrop className="projectBackdrop" />
         <Ribbon>{project.title}</Ribbon>
         
-        <CornerIcon> 
-          <RocketLaunchIcon />
-        </CornerIcon>
         <CenteringBox>
           <Typography
             component="h3"
@@ -30,8 +27,7 @@ function ProjectCard({ project }) {
             color="inherit"
             className="projectTitle"
           >
-            {project.title}
-            <div className="projectUnderscore" />
+            Check it out!
           </Typography>
         </CenteringBox>
       </ImageButton>

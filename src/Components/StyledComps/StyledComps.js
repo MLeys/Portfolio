@@ -41,21 +41,25 @@ export const ImageBox = styled(Box)({
 export const Ribbon = styled(Box)({
   position: 'absolute',
   top: '1rem',
-  left: '-2rem',
+  left: '-1rem',
   backgroundColor: theme.palette.primary.dark,
   color: 'white',
   padding: '0.5rem',
   fontSize: '1rem',
   fontWeight: 600,
+  borderRadius: '15%',
   // transform: 'rotate(45deg)',
   width: '150px',
   textAlign: 'center',
   zIndex: 5,
   '&::before': {
     content: '""',
+    outerHeight: '3rem',
+    fontSize: '2rem',
     position: 'absolute',
-    top: '-1rem',
-    left: 0,
+    top: '-.8rem',
+    borderRadius: '15%',
+    left: '-1rem',
     border: '1rem solid transparent',
     borderRightColor: theme.palette.primary.dark,
    },
@@ -89,41 +93,35 @@ export const ImageButton = styled(ButtonBase)(({ theme }) => ({
   marginLeft: 20,
   height: '40vh',
   [theme.breakpoints.down('sm')]: {
-    width: '100% !important',
+    width: '95% !important',
     height: 100,
   },
   '&:hover': {
     zIndex: 1,
-    
   },
   '&:hover .projectBackdrop': {
     zIndex: 0,
-    opacity: 0.2,
+    opacity: .4,
   },
   '&:hover .projectUnderscore': {
     opacity: 0,
   },
   '&:hover .projectTitle': {
-    color: theme.palette.secondary.light,
+    opacity: 1,
+    color: theme.palette.secondary.contrastText,
     background: theme.palette.secondary.dark,
     border: '4px solid currentColor',
   },
   '& .projectTitle': {
     position: 'relative',
-    color: theme.palette.purple.main,
-    
-    padding: `${theme.spacing(2)} ${theme.spacing(4)} 14px`,
+    opacity: 0,
+    padding: '14px',
+  },  
+  '& .projectBackdrop': {
+    zIndex: 1,
+    opacity: 0,
   },
-  '& .projectUnderscore': {
-    height: 6,
-    width: 40,
-    opacity: 1,
-    background: theme.palette.purple.main,
-    position: 'absolute',
-    bottom: -2,
-    left: 'calc(50% - 20px)',
-    transition: theme.transitions.create('opacity'),
-  },
+
 }));
 
 export const IconBackdrop = styled('div')(({ theme }) => ({
