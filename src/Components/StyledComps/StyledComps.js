@@ -3,6 +3,61 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 
+export const CenteringBox = styled(Box)({
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: '100%',
+  height: '100%',
+  overflow: '',
+})
+
+export const ImageBox = styled(Box)({
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+})
+
+export const Ribbon = styled(Box)({
+  position: 'absolute',
+  top: '1rem',
+  left: '-2rem',
+  backgroundColor: 'red',
+  color: 'white',
+  padding: '0.5rem',
+  fontSize: '1rem',
+  fontWeight: 600,
+  // transform: 'rotate(45deg)',
+  width: '150px',
+  textAlign: 'center',
+  zIndex: 5,
+  '&::before': {
+    content: '""',
+    position: 'absolute',
+    top: '-1rem',
+    left: 0,
+    border: '1rem solid transparent',
+    borderRightColor: 'red',
+  },
+  '&::after': {
+    content: '""',
+    position: 'absolute',
+    bottom: '-1rem',
+    left: 0,
+    border: '1rem solid transparent',
+    borderTopColor: 'red',
+  },
+});
+
 
 export const ImageBackdrop = styled('div')(({ theme }) => ({
   position: 'absolute',

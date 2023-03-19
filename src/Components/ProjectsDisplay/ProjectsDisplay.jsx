@@ -4,8 +4,9 @@ import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import { ImageBackdrop, ImageButton } from '../StyledComps/StyledComps';
+import { ImageBackdrop, ImageButton, Ribbon, CenteringBox, ImageBox } from '../StyledComps/StyledComps';
 import { Projects } from '../../lists/projects';
+import { alignProperty } from '@mui/material/styles/cssUtils';
 
 
 
@@ -15,50 +16,29 @@ export default function ProjectsDisplay() {
       <Typography variant="h3" marked="center" align="center" component="h2">
         Projects
       </Typography>
-      <Box sx={{ mt: 8, display: 'flex', flexWrap: 'wrap' }}>
+      <Box sx={{ mt: 8, display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
         {Projects.map((project) => (
           <ImageButton
             key={project.title}
             style={{
-              width: '33%',
+              width: '40%',
+              margin: 20,
             }}
           >
-            <Box
-              sx={{
-                position: 'absolute',
-                left: 0,
-                right: 0,
-                top: 0,
-                bottom: 0,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center 40%',
-                backgroundImage: `url(${project.thumbnailUrl})`,
-              }}
-            />
+            <ImageBox sx={{ backgroundImage: `url(${project.thumbnailUrl})` }} />
             <ImageBackdrop className="projectBackdrop" />
-            <Box
-              sx={{
-                position: 'absolute',
-                left: 0,
-                right: 0,
-                top: 0,
-                bottom: 0,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'common.white',
-              }}
-            >
-              <Typography
-                component="h3"
-                variant="h6"
-                color="inherit"
-                className="projectTitle"
-              >
-                {project.title}
-                <div className="projectUnderscore" />
-              </Typography>
-            </Box>
+            <Ribbon>{project.title}</Ribbon>
+              <CenteringBox>
+                <Typography
+                  component="h3"
+                  variant="h6"
+                  color="inherit"
+                  className="projectTitle"
+                >
+                  {project.title}
+                  <div className="projectUnderscore" />
+                </Typography>
+              </CenteringBox>
           </ImageButton>
         ))}
       </Box>
