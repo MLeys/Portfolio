@@ -14,6 +14,14 @@ import theme from '../../theme';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
 
 import ProjectCard from '../ProjectCard/ProjectCard';
+import List from '@mui/material/List';
+
+const Title = styled(Typography)({
+  fontSize: 16,
+  fontWeight: 'bolder',
+})
+
+const Bullet = styled(List) 
 
 const CornerIcon = styled(Box)({
   position: 'absolute',
@@ -39,7 +47,8 @@ export default function ProjectsDisplay() {
           <Grid xs={6}>
             <Typography variant='h6'> {project.description}</Typography>
             <Box >
-              hellow
+              <Title> Title: </Title>
+    
             </Box>
           </Grid>
 

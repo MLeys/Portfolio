@@ -3,6 +3,8 @@ import { ImageBackdrop, ImageButton, Ribbon, CenteringBox, ImageBox, CornerIcon 
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
+import { styled } from '@mui/material/styles';
+
 
 
 function ProjectCard({ project }) {
@@ -12,8 +14,6 @@ function ProjectCard({ project }) {
         key={project.title}
         style={{
           width: '90%',
-          
-          
         }}
       >
         <ImageBox sx={{ backgroundImage: `url(${project.thumbnailUrl})` }} />
