@@ -10,8 +10,8 @@ export const ImageBackdrop = styled('div')(({ theme }) => ({
   right: 0,
   top: 0,
   bottom: 0,
-  background: '#000',
-  opacity: 0.5,
+  background: theme.palette.purple.contrastText,
+  opacity: 0.4,
   transition: theme.transitions.create('opacity'),
 }));
 
@@ -28,27 +28,34 @@ export const ImageButton = styled(ButtonBase)(({ theme }) => ({
   },
   '&:hover': {
     zIndex: 1,
+    
   },
   '&:hover .projectBackdrop': {
-    opacity: 0.15,
+    zIndex: 0,
+    opacity: 0.2,
   },
-  '&:hover .projectMarked': {
+  '&:hover .projectUnderscore': {
     opacity: 0,
   },
   '&:hover .projectTitle': {
+    color: theme.palette.secondary.dark,
+    background: theme.palette.secondary.light,
     border: '4px solid currentColor',
   },
   '& .projectTitle': {
     position: 'relative',
+    color: theme.palette.purple.main,
+    
     padding: `${theme.spacing(2)} ${theme.spacing(4)} 14px`,
   },
-  '& .projectMarked': {
-    height: 3,
-    width: 18,
-    background: theme.palette.common.white,
+  '& .projectUnderscore': {
+    height: 6,
+    width: 40,
+    opacity: 1,
+    background: theme.palette.purple.main,
     position: 'absolute',
     bottom: -2,
-    left: 'calc(50% - 9px)',
+    left: 'calc(50% - 20px)',
     transition: theme.transitions.create('opacity'),
   },
 }));

@@ -1,13 +1,14 @@
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 
 import AboutMe from '../AboutMe/AboutMe';
 
 function IntroSection() {
   return ( 
-    <div className='section' id='intro'>
-      <Typography variant='h5' component='h2' marginY={2} paddingTop={2}>
+    <Container className='section' id='intro'>
+      <Typography variant='h4' component='h2' marginY={2} paddingTop={2}>
         A little introduction...
       </Typography>
       <Grid 
@@ -19,19 +20,19 @@ function IntroSection() {
         
         <Grid xs={12} sm={6} md={6} >
           <img  
-            src='https://imgur.com/g04SEb6.png'
+            src='https://imgur.com/mIaWlWA.png'
             style={{ width: '90%', borderRadius: '25%', margin: ".5rem" }}
           />
         </Grid>
         <Grid xs={12} sm={6} md={6} >
-          <Typography textAlign='left' margin={1}>
+          <Typography variant='body2' textAlign='left' margin={1} color='text.primary'>
             Hello! My name is Mike and I an excited to enter the tech industry as a 
             software engineer / full-stack web developer! I have always been drawn to 
             programming starting with customizing controls in CS back in 2000. 
             Driven by that passion I most recently took a leap of faith and completed the 
             SEI bootcamp at General Assembly.
           </Typography>
-          <Typography textAlign='left' margin={1}>
+          <Typography textAlign='left' margin={1} color='text.secondary'>
             I love working with people and take pride in my practice of emotional Intelligence. 
             My experience in leading teams, office meetings, presentations, projects, and running 
             a painting business have endowed me with a rare skill set in the industry. 
@@ -50,7 +51,7 @@ function IntroSection() {
        </Grid>
 
   
-    </div>
+    </Container>
     
    );
 }

@@ -56,7 +56,7 @@ export default function ProjectsDisplay() {
                 className="projectTitle"
               >
                 {project.title}
-                <div className="projectMarked" />
+                <div className="projectUnderscore" />
               </Typography>
             </Box>
           </ImageButton>

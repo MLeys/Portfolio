@@ -158,7 +158,7 @@ const theme = {
     },
     body2: {
       ...baseTheme.typography.body1,
-      fontSize: 14,
+      fontSize: 18,
     },
   },
 }
