@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageBackdrop, ImageButton, Ribbon, CenteringBox, ImageBox, CornerIcon } from '../StyledComps/StyledComps';
+import { ImageBackdrop, ImageButton, Ribbon, CenteringBox, ImageBox} from '../StyledComps/StyledComps';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
