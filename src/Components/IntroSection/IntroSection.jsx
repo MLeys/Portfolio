@@ -19,7 +19,7 @@ const AboutText = styled(Typography) ({
 
 function IntroSection() {
   return ( 
-    <Container className='section' id='intro' >
+    <Container sx={{ my: 20 }} id='intro' >
       <Typography variant='h4' component='h2' marginY={5} paddingTop={2}>
         About
       </Typography>
