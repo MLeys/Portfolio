@@ -12,7 +12,7 @@ import ContactDisplay from './Components/ContactDisplay/ContactDisplay';
 import theme from './theme';
 
 const MainDiv = styled('div') ({
-  backgroundColor: theme.palette.blueGray.main,
+  backgroundColor: theme.palette.blueGray.light,
   zIndex: -3,
   paddingBottom: 20,
 })

@@ -8,7 +8,7 @@ const baseTheme = createTheme({
   palette: {
     text: {
       primary: '#FFFFFF',
-      secondary: '#ffb25e',
+      secondary: '#000000',
     },
     primary: {
       main: '#009688',
@@ -76,8 +76,6 @@ const baseTheme = createTheme({
 const fontHeader = {
   color: baseTheme.palette.text.primary,
   fontWeight: baseTheme.typography.fontWeightMedium,
-  fontFamily: "'Roboto Condensed', sans-serif",
-  textTransform: 'uppercase',
 };
 
 const theme = {

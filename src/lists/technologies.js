@@ -183,6 +183,11 @@ export const Technologies = [
     level: '',
     url: `${BASEURL}vim/vim-original.svg`
   },
+  {
+    title: 'JQuery',
+    level: '',
+    url: `${BASEURL}jquery/jquery-original-wordmark.svg`
+  },
 
   {
     title: 'Docker',
@@ -213,4 +218,11 @@ export const Other = [
     level: 'Beginner',
     url: `${BASEURL}bash/bash-original.svg`
   },
+]
+
+export const softSkills = [
+  {
+  title: 'Project Management'
+  },
+   
 ]

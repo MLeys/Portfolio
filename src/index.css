@@ -9,7 +9,7 @@
 }
 
 .section {
-  min-height: 80vh;
+  min-height: 70vh;
 }
 .css-6hp17o-MuiList-root-MuiMenu-list {
   list-style: none;
@@ -21,4 +21,9 @@
   padding-top: 0px;
   padding-bottom: 0px;
   outline: 0;
+}
+
+.highlight {
+  color: #000000;
+  font-weight: 700;
 }
