@@ -8,8 +8,9 @@ import Grid from '@mui/material/Unstable_Grid2/Grid2';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import Alert from '@mui/material/Alert';
+import Snackbar from '@mui/material/Snackbar';
 
-const leftAlign = {'textAlign': 'left' };
 
 export default function ContactForm() {
   const [emailForm, setEmailForm] = useState({
@@ -19,6 +20,8 @@ export default function ContactForm() {
     email: '',
     message: ''
   });
+
+  const [emailSent, setEmailSent] = useState(false);
 
 
   function handleChange(e){
@@ -34,7 +37,8 @@ export default function ContactForm() {
       console.log("HERE")
       await emailjs.send('service_8qgftwr', 'template_3rv9xth', emailForm, 'I2g4LRL1m6FvLTl89')
       .then(function(response) {
-         console.log('SUCCESS!', response.status, response.text);
+        setEmailSent(true)
+        console.log('SUCCESS!', response.status, response.text);
       }, function(error) {
          console.log('FAILED...', error);
       });
@@ -55,6 +59,7 @@ export default function ContactForm() {
             alignItems: 'center',
           }}
         >
+
           <Typography component="h1" variant="h4">
             Contact
           </Typography>
@@ -67,7 +72,6 @@ export default function ContactForm() {
                   name="name"
                   required
                   fullWidth
-                  autoComplete='name'
                   value={emailForm.name}
                   onChange={handleChange}
                   variant='filled'
@@ -80,7 +84,6 @@ export default function ContactForm() {
                   name="title"
                   required
                   fullWidth
-                  autoComplete='title'
                   value={emailForm.title}
                   onChange={handleChange}
                   variant='filled'
@@ -92,8 +95,7 @@ export default function ContactForm() {
                   label="Company"
                   name="company"
                   required
-                  fullWidth
-                  autoComplete='company'
+                  fullWidth                  
                   value={emailForm.company}
                   onChange={handleChange}
                   variant='filled'
@@ -135,6 +137,9 @@ export default function ContactForm() {
             >
               Send
             </Button>
+            <Snackbar open={emailSent} onClose={() => setEmailSent(false)}>
+              <Alert sx={{ backgroundColor: 'primary.contrastText', color: 'primary.dark' }} severity="success">Email submitted successfully!</Alert>
+            </Snackbar>
           </Box>
         </Box>
       </Container>
