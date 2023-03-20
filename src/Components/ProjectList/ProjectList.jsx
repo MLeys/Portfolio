@@ -3,7 +3,7 @@ import List from '@mui/material/List';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemButton from '@mui/material/ListItemButton';
-
+import Paper from '@mui/material/Paper'
 import LaunchIcon from '@mui/icons-material/Launch';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TerminalIcon from '@mui/icons-material/Terminal';
@@ -47,36 +47,36 @@ export default function ProjectList( { project }) {
   const featuresInfo = project.features.join(', ')
 
   return (
-    <CustomList className='customList'>
-      <ListItemButton className='projectListItem' disableGutters disablePadding component='a' href={project.deploymentUrl}>
-        <ListItemIcon>
-          <LaunchIcon />
-        </ListItemIcon>
-        <ListItemText
-          primary={project.title}
-          secondary={project.about}
-        />
-      </ListItemButton>
-      <ListItemButton className='projectListItem' disableGutters disablePadding component='a' href={project.gitHubUrl} >
-        <ListItemIcon >
-          <GitHubIcon />
-        </ListItemIcon>
-        <ListItemText
-          primary="Features"
-          secondary={featuresInfo}
-        />
-      </ListItemButton>
-      <ListItemButton className='projectListItem' disableGutters disablePadding>
-        <ListItemIcon>
-          <TerminalIcon />
-        </ListItemIcon>
-        <ListItemText
-          primary="Tech"
-          secondary={techInfo}
-        />
-      </ListItemButton>
-    </CustomList>
-     
-   
+    <Paper elevation={20}>
+      <CustomList className='customList'>
+        <ListItemButton className='projectListItem' disableGutters disablePadding component='a' href={project.deploymentUrl}>
+          <ListItemIcon>
+            <LaunchIcon />
+          </ListItemIcon>
+          <ListItemText
+            primary={project.title}
+            secondary={project.about}
+          />
+        </ListItemButton>
+        <ListItemButton className='projectListItem' disableGutters disablePadding component='a' href={project.gitHubUrl} >
+          <ListItemIcon >
+            <GitHubIcon />
+          </ListItemIcon>
+          <ListItemText
+            primary="Features"
+            secondary={featuresInfo}
+          />
+        </ListItemButton>
+        <ListItemButton className='projectListItem' disableGutters disablePadding>
+          <ListItemIcon>
+            <TerminalIcon />
+          </ListItemIcon>
+          <ListItemText
+            primary="Tech"
+            secondary={techInfo}
+          />
+        </ListItemButton>
+      </CustomList>
+    </Paper>
   );
 }

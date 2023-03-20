@@ -26,7 +26,6 @@ function Main() {
       <IntroSection />
       <TechDisplay />
       <ProjectsDisplay />
- 
     </MainDiv>
     );
 }
