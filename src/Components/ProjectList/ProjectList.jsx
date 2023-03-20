@@ -1,20 +1,15 @@
 import * as React from 'react';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemButton from '@mui/material/ListItemButton';
-import Grid from '@mui/material/Unstable_Grid2/Grid2';
-import FolderIcon from '@mui/icons-material/Folder';
-import DescriptionIcon from '@mui/icons-material/Description';
+
 import LaunchIcon from '@mui/icons-material/Launch';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import BoltIcon from '@mui/icons-material/Bolt';
 import TerminalIcon from '@mui/icons-material/Terminal';
 import styled from '@emotion/styled';
 import theme from '../../theme';
-import { Typography } from '@mui/material';
-import Link from '@mui/material/Link';
+
 
 const CustomList = styled(List) ({
   backgroundColor: theme.palette.blueGray.dark,
