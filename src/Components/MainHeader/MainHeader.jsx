@@ -7,6 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
@@ -95,7 +96,9 @@ function MainHeader() {
           </Box>
           <Typography
             variant="h6"
-            component="h2"
+            component={Link}
+            href='http://www.linkedin/in/leysmike'
+            
             color={theme.palette.common.white}
             sx={{
               mr: 2,
@@ -105,9 +108,12 @@ function MainHeader() {
               letterSpacing: '.2rem',
             }}
           >
-            Michael Leys
+            <LinkedInIcon  sx={{mr: 2}}/>
+             Michael Leys
           </Typography>
+          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
+          
             {sections.map((page, index) => (
               <Button
                 key={page.title}
