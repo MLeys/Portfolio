@@ -29,9 +29,6 @@ function ProjectCard({ project }) {
         <Ribbon>{project.title}</Ribbon>
       </CenteringBox>
     </ImageButton>
-    
-
-
   );
 }
 
