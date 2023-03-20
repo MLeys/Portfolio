@@ -1,15 +1,10 @@
 import React from "react";
 import { Technologies } from '../../lists/technologies';
 import { IconBackdrop, IconButton } from '../StyledComps/StyledComps';
-
-
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
 
-import TechIcon from "../TechIcon/TechIcon";
 
 const backgroundImage =
   'https://imgur.com/ZflQePB.png';
@@ -17,7 +12,6 @@ const backgroundImage =
   // 'https://imgur.com/OrHrNij.png';
 
 const sxBackground = {
-  
   marginTop: 0,
   backgroundImage: `url(${backgroundImage})`,
   backgroundColor: '#4d2e00', 
