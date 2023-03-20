@@ -84,6 +84,7 @@ export const ImageButton = styled(ButtonBase)(({ theme }) => ({
   padding: 0,
   marginLeft: 20,
   height: '40vh',
+  
   [theme.breakpoints.down('sm')]: {
     width: '95% !important',
     height: 100,

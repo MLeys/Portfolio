@@ -11,9 +11,10 @@ import { styled } from '@mui/material/styles';
 function ProjectCard({ project }) {
   return ( 
     <ImageButton
-      
       key={project.title}
-      style={{
+      LinkComponent='a'
+      href={project.deploymentUrl}
+      sx={{
         width: '90%',
       }}
     >
