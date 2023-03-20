@@ -25,7 +25,6 @@ function App() {
       <MainDiv className='mainPage' >
         <MainHeader />
         <LandingSection />
-        <a href='public/Resume.pdf' target='_blank'> Resume</a>
         <IntroSection />
         <TechDisplay />
         <ProjectsDisplay />

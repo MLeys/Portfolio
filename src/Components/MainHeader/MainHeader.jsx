@@ -23,7 +23,7 @@ const sections = [
 ]
 
 const options = [
-  { title: 'Resume', link: '#'},
+  { title: 'Resume', link: '20230222_Leys-Michael_Resume-v5.pdf'},
   { title: 'Contact', link: '#contact'}
 ]
 
