@@ -24,6 +24,16 @@ export default function ContactForm() {
   const [emailSent, setEmailSent] = useState(false);
 
 
+  function clearEmailForm() {
+    setEmailForm({
+      name: '',
+      title: '',
+      company: '',
+      email: '',
+      message: ''
+    })
+  }
+
   function handleChange(e){
     setEmailForm({
       ...emailForm,
@@ -37,7 +47,8 @@ export default function ContactForm() {
       console.log("HERE")
       await emailjs.send('service_8qgftwr', 'template_3rv9xth', emailForm, 'I2g4LRL1m6FvLTl89')
       .then(function(response) {
-        setEmailSent(true)
+        setEmailSent(true);
+        clearEmailForm();
         console.log('SUCCESS!', response.status, response.text);
       }, function(error) {
          console.log('FAILED...', error);
