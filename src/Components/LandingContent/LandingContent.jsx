@@ -20,11 +20,12 @@ function LandingContent() {
       <Typography
         className="landingTitle"
         color="inherit"
+        fontWeight='400'
         variant="h5"
         sx={{ 
           mb: { xs: 4, sm: 8 },
           mt: { xs: 4, sm: 8 }, 
-          letterSpacing: '.5rem' 
+          letterSpacing: '.3rem' 
         }}
       >
         Software Engineer - Full Stack Developer
