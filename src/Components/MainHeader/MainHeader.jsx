@@ -96,9 +96,6 @@ function MainHeader() {
           </Box>
           <Typography
             variant="h6"
-            component={Link}
-            href='http://www.linkedin/in/leysmike'
-            
             color={theme.palette.common.white}
             sx={{
               mr: 2,
@@ -108,12 +105,9 @@ function MainHeader() {
               letterSpacing: '.2rem',
             }}
           >
-            <LinkedInIcon  sx={{mr: 2}}/>
              Michael Leys
           </Typography>
-          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
-          
             {sections.map((page, index) => (
               <Button
                 key={page.title}
@@ -152,6 +146,9 @@ function MainHeader() {
                   Software Engineer
                 </Typography>
               </Stack>
+              <Box alignSelf='center' m={0} p={0} component={Link} href='http://www.linkedin.com/in/leysmike' >
+                <LinkedInIcon fontSize='large'/>
+              </Box>
             </Stack>
             
             <Menu
