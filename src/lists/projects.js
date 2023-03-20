@@ -26,42 +26,44 @@ export const Projects = [
   {
     id: 2, 
     title: "Pursuit of HappYness", 
-    about: "Hub for easy access to all of your medical and health needs",
+    about: "Patient first-app empowering users to manage and take charge of their own health",
     features: [ 
       "Intuitive Dashboard", 
+      "Health Organization",
       "AutoComplete for available medications",
+      "Appointment Tracking"
     ],
     tech: [
-      "Mongoose",  
-      "Express",
-      "Node.js", 
-      "OAUTH",
-      "Bootstrap",
-      "AWS"
+      "Python",
+      "Django",
+      "HTML",
+      "JavaScript",
+      "Sass",
+      "PostgreSQL"
     ],
-    thumbnailUrl: "https://imgur.com/TjSIYbx.jpg",
-    deploymentUrl: "https://skills-map.cyclic.app/",
-    gitHubUrl: "https://github.com/MLeys/Project-4",
+    thumbnailUrl: "https://camo.githubusercontent.com/3ef6a0df081b1ca6fbbcea0257f7d64cf1c3360ea4d58496920f8b0710447420/68747470733a2f2f696d6775722e636f6d2f646d4a766638512e6a7067",
+    deploymentUrl: "https://snowy-sky-6053.fly.dev/",
+    gitHubUrl: "https://github.com/MLeys/Poh",
     videoUrl: "",
   },
   {
     id: 3, 
     title: "Layers", 
-    about: "Team project tracking",
+    about: "Team project tracking and organization",
     features: [ 
-      "Django ", 
-      
+      "Orgainize team projects",
+      "Rescticted access",
     ],
     tech: [
       "Mongoose",  
       "Express",
       "MongoDB",
-      "Django", 
-      "OAUTH",
+      "Node.js", 
+      "OAUTH Authenticaion",
     ],
-    thumbnailUrl: "https://imgur.com/TjSIYbx.jpg",
-    deploymentUrl: "https://skills-map.cyclic.app/",
-    gitHubUrl: "https://github.com/MLeys/Project-4",
+    thumbnailUrl: "https://raw.githubusercontent.com/MLeys/Layers/main/public/images/ss10.png",
+    deploymentUrl: "https://mysterious-mite-sarong.cyclic.app/",
+    gitHubUrl: "https://github.com/MLeys/Layers",
     videoUrl: "",
   },
 ]

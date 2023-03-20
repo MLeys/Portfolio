@@ -3,6 +3,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import ListItemButton from '@mui/material/ListItemButton';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
 import FolderIcon from '@mui/icons-material/Folder';
 import DescriptionIcon from '@mui/icons-material/Description';
@@ -15,22 +16,9 @@ import theme from '../../theme';
 import { Typography } from '@mui/material';
 import Link from '@mui/material/Link';
 
-const ListText = styled(ListItemText) ({
-  primaryTypographyProps: {
-    fontSize: 20,
-    fontWeight: 'medium',
-    color: 'secondary.contrastText',
-    textAlign: 'left',
-  },
-  secondaryTypographyProps: {
-    fontSize: '12',
-    color: 'secondary.contrastText',
-    textAlign: 'left',
-  }
-})
-
 const CustomList = styled(List) ({
-  backgroundColor: theme.palette.background.placeholder,
+  backgroundColor: theme.palette.blueGray.light,
+  color: theme.palette.common.black,
   '& .MuiListItemIcon-root': {
     alignContent: 'right',
     justifyContent: 'right',
@@ -66,41 +54,41 @@ const CustomListItem = styled(ListItem)({
 
 export default function ProjectList( { project }) {
   const techInfo = project.tech.join(', ')
+  const featuresInfo = project.features.join(', ')
 
   return (
       
         <CustomList className='customList'>
-          <CustomListItem className='projectListItem' disableGutters disablePadding component='a' href={project.deploymentUrl}>
+          <ListItemButton className='projectListItem' disableGutters disablePadding component='a' href={project.deploymentUrl}>
             <ListItemIcon>
               <LaunchIcon />
             </ListItemIcon>
-            <ListText
+            <ListItemText
               primary={project.title}
               secondary={project.about}
             />
-          </CustomListItem>
-          <ListItem className='projectListItem' disableGutters disablePadding component='a' href={project.gitHubUrl} >
+          </ListItemButton>
+          <ListItemButton className='projectListItem' disableGutters disablePadding component='a' href={project.gitHubUrl} >
+           
             <ListItemIcon >
               <GitHubIcon />
             </ListItemIcon>
-            <ListText
+            <ListItemText
               primary="Features"
-              secondary={
-                project.features.map((f) => (
-                 <Typography textAlign='left'>{f}</Typography>
-                ))
-              }
+              secondary={featuresInfo}
             />
-          </ListItem>
-          <ListItem className='projectListItem' disableGutters disablePadding>
+           
+
+          </ListItemButton>
+          <ListItemButton className='projectListItem' disableGutters disablePadding>
             <ListItemIcon>
               <TerminalIcon />
             </ListItemIcon>
-            <ListText
+            <ListItemText
               primary="Tech"
               secondary={techInfo}
             />
-          </ListItem>
+          </ListItemButton>
         </CustomList>
      
    
