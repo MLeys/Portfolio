@@ -40,7 +40,7 @@ const sxBackground = {
   backgroundPosition: 'center',
 }
 
-function LandingSection() {
+function LandingDisplay() {
 
   return ( 
     <LandingSectionLayout>
@@ -80,4 +80,4 @@ function LandingSection() {
    );
 }
 
-export default LandingSection;
+export default LandingDisplay;

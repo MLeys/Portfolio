@@ -17,7 +17,7 @@ import ProjectList from '../ProjectList/ProjectList';
 
 export default function ProjectsDisplay() {
   return (
-    <Container className='section' id='projects' sx={{ paddingBottom: 10}}>
+    <Container className='section' id='projects' >
       <Typography variant="h3" marked="center" align="center" component="h2">
         Projects
       </Typography>
