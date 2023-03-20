@@ -51,12 +51,12 @@ function MainHeader() {
     <AppBar 
       position="fixed" 
       sx={{ 
-        backgroundColor: theme.palette.primary.main, 
-        color: theme.palette.primary.contrastText
+        backgroundColor: theme.palette.blueGray.dark, 
+        color: theme.palette.primary.contrastText,
       }}
     >
-      <Container maxWidth="100%">
-        <Toolbar disableGutters>
+      <Container maxWidth="100%" >
+        <Toolbar disableGutters >
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none' } }}>
             <Tooltip title='Menu'>
               <IconButton

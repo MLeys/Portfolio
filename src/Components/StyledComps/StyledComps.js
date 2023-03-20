@@ -3,16 +3,8 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import theme from '../../theme';
+import Paper from '@mui/material/Paper';
 
-export const CornerIcon = styled(Box)({
-  position: 'absolute',
-  top: 0,
-  right: 0,
-  padding: 3,
-  zIndex: 5,
-  borderRadius: '25%',
-  backgroundColor: theme.palette.orange.dark,
-})
 
 export const CenteringBox = styled(Box)({
   position: 'absolute',
@@ -28,7 +20,7 @@ export const CenteringBox = styled(Box)({
   overflow: '',
 })
 
-export const ImageBox = styled(Box)({
+export const ImageBox = styled(Paper)({
   position: 'absolute',
   left: 0,
   right: 0,
@@ -36,6 +28,7 @@ export const ImageBox = styled(Box)({
   bottom: 0,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
+  square: true,
 })
 
 export const Ribbon = styled(Box)({
@@ -118,8 +111,8 @@ export const ImageButton = styled(ButtonBase)(({ theme }) => ({
     padding: '14px',
   },  
   '& .projectBackdrop': {
-    zIndex: 1,
-    opacity: 0,
+    zIndex: 2,
+    opacity: 1,
   },
 
 }));

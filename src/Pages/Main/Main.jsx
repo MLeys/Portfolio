@@ -11,7 +11,7 @@ import LandingSection from '../../Components/LandingSection/LandingSection';
 import theme from '../../theme';
 
 const MainDiv = styled('div') ({
-  backgroundColor: theme.palette.background.main,
+  backgroundColor: theme.palette.blueGray.main,
   zIndex: -3,
 })
 
