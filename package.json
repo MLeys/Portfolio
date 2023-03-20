@@ -12,6 +12,7 @@
     "server": "nodemon server.js"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fontsource/source-sans-pro": "^4.5.11",
