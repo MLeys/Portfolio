@@ -18,13 +18,13 @@ function IntroSection() {
         justifyContent="center"
       >
         
-        <Grid xs={12} sm={6} md={6} >
+        <Grid xs={12} sm={8}  >
           <img  
             src='https://imgur.com/mIaWlWA.png'
-            style={{ width: '90%', borderRadius: '25%', margin: ".5rem" }}
+            style={{ width: '200px', borderRadius: '25%', margin: ".5rem" }}
           />
         </Grid>
-        <Grid xs={12} sm={6} md={6} >
+        <Grid xs={10}  >
           <Typography variant='body2' textAlign='left' margin={1} color='text.primary'>
             Hello! My name is Mike and I an excited to enter the tech industry as a 
             software engineer / full-stack web developer! I have always been drawn to 
