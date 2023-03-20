@@ -8,6 +8,7 @@ import IntroSection from './Components/IntroSection/IntroSection';
 import ProjectsDisplay from './Components/ProjectsDisplay/ProjectsDisplay';
 import TechDisplay from './Components/TechDisplay/TechDisplay';
 import ContactDisplay from './Components/ContactDisplay/ContactDisplay';
+import ContactForm from './Components/ContactForm/ContactForm';
 
 import theme from './theme';
 

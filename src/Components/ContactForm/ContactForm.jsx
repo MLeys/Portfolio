@@ -10,6 +10,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Alert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
+import Paper from '@mui/material/Paper';
 
 
 export default function ContactForm() {
@@ -59,87 +60,71 @@ export default function ContactForm() {
   }
 
   return (
-    
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <Box
-          sx={{
-            marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
+    <Grid container spacing={1} justifyContent='center' >
+      <Grid xs={10} sm={8} md={6}  sx={{backgroundColor: 'inherit'}}>
+        <Typography component="h1" variant="h4" mb={10}>
+          Contact
+        </Typography>
+        <Box 
+          component="form"
+          noValidate 
+          onSubmit={handleSubmit} 
+          sx={{ mt: 3 }}
         >
-
-          <Typography component="h1" variant="h4">
-            Contact
-          </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
-            <Grid container spacing={1}>
-              <Grid xs={12}>
-                <TextField
-                  id="name"
-                  label="Name"
-                  name="name"
-                  required
-                  fullWidth
-                  value={emailForm.name}
-                  onChange={handleChange}
-                  variant='filled'
-                />
-              </Grid>
-              <Grid xs={12}>
-                <TextField
-                  id="title"
-                  label="Job Title"
-                  name="title"
-                  required
-                  fullWidth
-                  value={emailForm.title}
-                  onChange={handleChange}
-                  variant='filled'
-                />
-              </Grid>
-              <Grid xs={12}>
-                <TextField
-                  id="company"
-                  label="Company"
-                  name="company"
-                  required
-                  fullWidth                  
-                  value={emailForm.company}
-                  onChange={handleChange}
-                  variant='filled'
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  id="email"
-                  label="Email Address"
-                  name="email"
-                  required
-                  fullWidth
-                  autoComplete="email"
-                  value={emailForm.email}
-                  onChange={handleChange}
-                  variant='filled'
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  id="message"
-                  label="Message"
-                  name="message"
-                  required
-                  fullWidth
-                  value={emailForm.message}
-                  onChange={handleChange}
-                  variant='filled'
-                  multiline
-                  minRows={5}
-                />
-              </Grid>
-            </Grid>
+          <Paper elevation={15} sx={{backgroundColor: 'inherit'}}>
+            <TextField
+              id="name"
+              label="Name"
+              name="name"
+              required
+              fullWidth
+              value={emailForm.name}
+              onChange={handleChange}
+              variant='filled'
+            />
+            <TextField
+              id="title"
+              label="Job Title"
+              name="title"
+              required
+              fullWidth
+              value={emailForm.title}
+              onChange={handleChange}
+              variant='filled'
+            />
+            <TextField
+              id="company"
+              label="Company"
+              name="company"
+              required
+              fullWidth                  
+              value={emailForm.company}
+              onChange={handleChange}
+              variant='filled'
+            />
+            <TextField
+              id="email"
+              label="Email Address"
+              name="email"
+              required
+              fullWidth
+              autoComplete="email"
+              value={emailForm.email}
+              onChange={handleChange}
+              variant='filled'
+            />
+            <TextField
+              id="message"
+              label="Message"
+              name="message"
+              required
+              fullWidth
+              value={emailForm.message}
+              onChange={handleChange}
+              variant='filled'
+              multiline
+              minRows={5}
+            />
             <Button
               type="submit"
               fullWidth
@@ -151,9 +136,16 @@ export default function ContactForm() {
             <Snackbar open={emailSent} onClose={() => setEmailSent(false)}>
               <Alert sx={{ backgroundColor: 'primary.contrastText', color: 'primary.dark' }} severity="success">Email submitted successfully!</Alert>
             </Snackbar>
-          </Box>
+          </Paper>
+
+          
         </Box>
-      </Container>
+      </Grid>    
+    </Grid>
+    
+  
+   
+
     
   );
 }
