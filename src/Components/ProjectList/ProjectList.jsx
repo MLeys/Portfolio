@@ -49,7 +49,7 @@ export default function ProjectList( { project }) {
   return (
     <Paper elevation={20}>
       <CustomList className='customList'>
-        <ListItemButton className='projectListItem' disableGutters disablePadding component='a' href={project.deploymentUrl}>
+        <ListItemButton className='projectListItem' component='a' href={project.deploymentUrl}>
           <ListItemIcon>
             <LaunchIcon />
           </ListItemIcon>
@@ -58,7 +58,7 @@ export default function ProjectList( { project }) {
             secondary={project.about}
           />
         </ListItemButton>
-        <ListItemButton className='projectListItem' disableGutters disablePadding component='a' href={project.gitHubUrl} >
+        <ListItemButton className='projectListItem'  component='a' href={project.gitHubUrl} >
           <ListItemIcon >
             <GitHubIcon />
           </ListItemIcon>
@@ -67,7 +67,7 @@ export default function ProjectList( { project }) {
             secondary={featuresInfo}
           />
         </ListItemButton>
-        <ListItemButton className='projectListItem' disableGutters disablePadding>
+        <ListItemButton className='projectListItem' >
           <ListItemIcon>
             <TerminalIcon />
           </ListItemIcon>

@@ -17,7 +17,6 @@ export const CenteringBox = styled(Box)({
   justifyContent: 'center',
   width: '100%',
   height: '100%',
-  overflow: '',
 })
 
 export const ImageBox = styled(Paper)({
@@ -41,7 +40,7 @@ export const Ribbon = styled(Box)({
   fontSize: '1rem',
   fontWeight: 600,
   borderRadius: '15%',
-  // transform: 'rotate(45deg)',
+
   width: '150px',
   textAlign: 'center',
   zIndex: 5,

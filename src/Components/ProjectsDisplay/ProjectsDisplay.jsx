@@ -7,12 +7,8 @@ import Grid from '@mui/material/Unstable_Grid2/Grid2';
 
 import { Projects } from '../../lists/projects';
 
-
-
-
 import ProjectCard from '../ProjectCard/ProjectCard';
 import ProjectList from '../ProjectList/ProjectList';
-
 
 
 export default function ProjectsDisplay() {
@@ -21,8 +17,8 @@ export default function ProjectsDisplay() {
       <Typography variant="h3" marked="center" align="center" component="h2">
         Projects
       </Typography>
-      {Projects.map((project) => (
-        <Grid container mt={5}>
+      {Projects.map((project, index) => (
+        <Grid container mt={5} key={`container-${index}`}>
           <Grid xs={12} sm={6}>
             <ProjectCard project={project} />
           </Grid>

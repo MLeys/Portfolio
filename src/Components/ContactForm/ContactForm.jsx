@@ -124,7 +124,6 @@ export default function ContactForm() {
                   variant='filled'
                   multiline
                   minRows={5}
-                  tex
                 />
               </Grid>
             </Grid>

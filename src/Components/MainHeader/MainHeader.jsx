@@ -78,8 +78,8 @@ function MainHeader() {
               onClose={handleCloseNavMenu}
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
-              {sections.map((page) => (
-                <MenuItem >
+              {sections.map((page, index) => (
+                <MenuItem key={`menuItem-${index}`}>
                   <Link 
                     key={page.title} 
                     href={page.link} 
@@ -108,7 +108,7 @@ function MainHeader() {
             Michael Leys
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
-            {sections.map((page) => (
+            {sections.map((page, index) => (
               <Button
                 key={page.title}
                 onClick={handleCloseNavMenu}
@@ -119,7 +119,7 @@ function MainHeader() {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0 }} >
             <Stack direction='row'>
               <Tooltip title="Options">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 1 }}>
@@ -164,8 +164,8 @@ function MainHeader() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {options.map((option) => (
-                <MenuItem sx={{ margin: 0}}>
+              {options.map((option, index) => (
+                <MenuItem sx={{ margin: 0}} key={`option-${index}`}>
                   <Link 
                     key={option.title} 
                     href={option.link} 

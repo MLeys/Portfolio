@@ -66,8 +66,6 @@ function TechDisplay() {
               }}
             >
               <Typography
-                component="body2"
-                variant="body2"
                 color="common.white"
                 className="iconTitle"
                 sx={{ opacity: 0}}
