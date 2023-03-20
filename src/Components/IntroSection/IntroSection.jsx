@@ -19,9 +19,9 @@ const AboutText = styled(Typography) ({
 
 function IntroSection() {
   return ( 
-    <Container className='section' id='intro'>
-      <Typography variant='h4' component='h2' marginY={2} paddingTop={2}>
-        About me
+    <Container className='section' id='intro' >
+      <Typography variant='h4' component='h2' marginY={5} paddingTop={2}>
+        About
       </Typography>
       <Grid 
         container 

@@ -1,0 +1,80 @@
+
+.landingName {
+  opacity: 0;
+  animation-delay: 2s;
+  animation-name: fadeInAbove;
+  animation-duration: 1.0s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  transition: 1s;
+}
+
+.landingTitle {
+  opacity: 0;
+  animation-delay: 0.5s;
+  animation-name: fadeInLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.landingWords {
+  opacity: 0;
+  animation-delay: 3s;
+  animation-name: fadeInRight;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.landingButton {
+  opacity: 0;
+  animation-delay: 4s;
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeInAbove {
+  0% {
+      transform: translateY(-50%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0%);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+      transform: translateX(-10%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0%);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+      transform: translateX(110%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0%);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}

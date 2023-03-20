@@ -19,7 +19,8 @@ import theme from '../../theme';
 const sections = [
   { title: "About", link: "#intro" },
   { title: "Technologies", link: "#tech" },
-  { title: "Projects", link: "#projects" }
+  { title: "Projects", link: "#projects" },
+  { title: 'Resume', link: '20230222_Leys-Michael_Resume-v5.pdf'}
 ]
 
 const options = [

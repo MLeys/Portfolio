@@ -1,4 +1,5 @@
 import React from 'react';
+import "./LandingDisplay.css"
 import styled from '@emotion/styled';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container'
@@ -13,7 +14,7 @@ const LandingSectionLayout = styled('section')(({ theme }) => ({
   alignItems: 'center',
   zIndex: 0,
   [theme.breakpoints.up('sm')]: {
-    height: '80vh',
+    height: '100vh',
     minHeight: 500,
     maxHeight: 1300,
   },

@@ -6,7 +6,8 @@ import Button from '@mui/material/Button';
 function LandingContent() {
   return (  
     <div>
-      <Typography 
+      <Typography
+        className="landingName" 
         color="inherit" 
         variant="h2"
         sx={{
@@ -17,6 +18,7 @@ function LandingContent() {
         Michael Leys
       </Typography>
       <Typography
+        className="landingTitle"
         color="inherit"
         variant="h5"
         sx={{ 
@@ -28,6 +30,7 @@ function LandingContent() {
         Software Engineer - Full Stack Developer
       </Typography>
       <Button
+        className="landingButton"
         color="secondary"
         variant="contained"
         size="large"
@@ -38,6 +41,7 @@ function LandingContent() {
         Projects
       </Button>
       <Typography
+        className="landingWords"
         variant="body2" 
         color="inherit" 
         sx={{ mt: 4 }}
