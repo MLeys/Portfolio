@@ -1,9 +1,4 @@
-# A Minimalist Mern Boilerplate Powered by Vite
-
-
-This Boilerplate is meant to give a bare bones Mern app that is ready for use in production or locally. This Boilerplate is intended for a single deployment of an express server, serving a compiled react app. 
-
-
+git ad
 #### Overview
 
 - There are **two branches**
