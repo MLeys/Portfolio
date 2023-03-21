@@ -26,15 +26,10 @@ app.use(logger('dev'));
 app.use(express.json()); // sets up our server to recieve JSON requests, this defines req.body for json requests
 
 
-
-
 // api routes must be before the "catch all" route
 import myRoutes from './routes/myRoutes.js';
 
-
 app.use('/api', myRoutes)
-
-
 
 app.use(express.static(path.join(__dirname, "dist")));
 
