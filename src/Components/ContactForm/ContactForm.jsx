@@ -1,6 +1,9 @@
 import * as React from 'react';
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
+
+import { alpha, styled } from '@mui/material/styles';
+
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
@@ -9,7 +12,33 @@ import Typography from '@mui/material/Typography';
 import Alert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
 import Paper from '@mui/material/Paper';
+import theme from '../../theme';
 
+
+
+const CustomTextField = styled(TextField)({
+  '& label.Mui-focused': {
+    color: theme.palette.primary.dark,
+  },
+  '& .MuiFilledInput-root': {
+    border: '1px solid #000',
+    overflow: 'hidden',
+    borderRadius: 4,
+    backgroundColor: theme.palette.secondary.light,
+    color: theme.palette.common.black,
+    transition: theme.transitions.create([
+      'border-color',
+      'background-color',
+    ]),
+    '&:hover': {
+      backgroundColor: 'transparent',
+    },
+    '&.Mui-focused': {
+      backgroundColor: 'transparent',
+      borderColor: theme.palette.common.black,
+    },
+  },
+});
 
 export default function ContactForm() {
   const [emailForm, setEmailForm] = useState({
@@ -59,85 +88,87 @@ export default function ContactForm() {
 
   return (
     <Grid container spacing={1} justifyContent='center' >
-      <Grid xs={10} sm={8} md={6}  sx={{backgroundColor: 'inherit'}}>
-        <Typography component="h1" variant="h4" mb={10}>
+      <Grid xs={10} sm={8} md={6} >
+        <Typography component="h1" variant="h4" mb={5}>
           Contact
         </Typography>
-        <Box 
+        <Paper 
           component="form"
           noValidate 
           onSubmit={handleSubmit} 
-          sx={{ mt: 3 }}
-        >
-          <Paper elevation={15} sx={{backgroundColor: 'inherit'}}>
-            <TextField
-              id="name"
-              label="Name"
-              name="name"
-              required
-              fullWidth
-              value={emailForm.name}
-              onChange={handleChange}
-              variant='filled'
-            />
-            <TextField
-              id="title"
-              label="Job Title"
-              name="title"
-              required
-              fullWidth
-              value={emailForm.title}
-              onChange={handleChange}
-              variant='filled'
-            />
-            <TextField
-              id="company"
-              label="Company"
-              name="company"
-              required
-              fullWidth                  
-              value={emailForm.company}
-              onChange={handleChange}
-              variant='filled'
-            />
-            <TextField
-              id="email"
-              label="Email Address"
-              name="email"
-              required
-              fullWidth
-              autoComplete="email"
-              value={emailForm.email}
-              onChange={handleChange}
-              variant='filled'
-            />
-            <TextField
-              id="message"
-              label="Message"
-              name="message"
-              required
-              fullWidth
-              value={emailForm.message}
-              onChange={handleChange}
-              variant='filled'
-              multiline
-              minRows={5}
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Send
-            </Button>
-            <Snackbar open={emailSent} onClose={() => setEmailSent(false)}>
-              <Alert sx={{ backgroundColor: 'primary.contrastText', color: 'primary.dark' }} severity="success">Email submitted successfully!</Alert>
-            </Snackbar>
-          </Paper>
-
+          elevation={15} 
           
-        </Box>
+          sx={{
+            backgroundColor: theme.palette.blueGray.contrastText,
+            color: theme.palette.error.light, 
+          }}
+        >
+          <CustomTextField
+            id="name"
+            label="Name"
+            name="name"
+            required
+            fullWidth
+            value={emailForm.name}
+            onChange={handleChange}
+            variant='filled'
+          />
+          <CustomTextField
+            id="title"
+            label="Job Title"
+            name="title"
+            required
+            fullWidth
+            value={emailForm.title}
+            onChange={handleChange}
+            variant='filled'
+          />
+          <CustomTextField
+            id="company"
+            label="Company"
+            name="company"
+            required
+            fullWidth                  
+            value={emailForm.company}
+            onChange={handleChange}
+            variant='filled'
+          />
+          <CustomTextField
+            id="email"
+            label="Email Address"
+            name="email"
+            required
+            fullWidth
+            autoComplete="email"
+            value={emailForm.email}
+            onChange={handleChange}
+            variant='filled'
+          />
+          <CustomTextField
+            id="message"
+            label="Message"
+            name="message"
+            required
+            fullWidth
+            value={emailForm.message}
+            onChange={handleChange}
+            variant='filled'
+            multiline
+            minRows={5}
+          />
+          <Button
+            type="submit"
+            fullWidth
+            
+            variant="contained"
+            sx={{ my: 0, height: 50}}
+          >
+            Send
+          </Button>
+          <Snackbar open={emailSent} onClose={() => setEmailSent(false)}>
+            <Alert sx={{ backgroundColor: 'primary.contrastText', color: 'primary.dark' }} severity="success">Email submitted successfully!</Alert>
+          </Snackbar>
+        </Paper>
       </Grid>    
     </Grid>
     
