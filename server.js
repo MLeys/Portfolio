@@ -2,7 +2,7 @@
 import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 dotenv.config()
 import 'dotenv/config.js'
-
+const cors = require('cors');
 
 import express from 'express'
 import { fileURLToPath } from 'url'
@@ -31,7 +31,7 @@ app.use(express.json()); // sets up our server to recieve JSON requests, this de
 // api routes must be before the "catch all" route
 import myRoutes from './routes/myRoutes.js';
 
-
+app.use(cors());
 app.use('/api', myRoutes)
 
 
