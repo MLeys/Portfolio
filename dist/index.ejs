@@ -7,7 +7,14 @@
 	<link rel="stylesheet" href="/<%=manifest['src/main.css'].file%>" />
 	<script type="module" src="/<%=manifest['src/main.jsx'].file %>"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"> 
-
+	<script type="text/javascript"
+	src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+	(function(){
+		emailjs.init("I2g4LRL1m6FvLTl89");
+	})();
+</script>
 </head>
 <body>
 	<div id="root"></div>
