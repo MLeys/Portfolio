@@ -12,14 +12,14 @@ const baseTheme = createTheme({
     },
     primary: {
       main: '#009688',
-      light: '#B2DFDB',
-      darker: '#00796B',
+      light: '#00ffe5',
+      dark: '#004d44',
       contrastText: '#212121',
     },
     secondary: {
       main: '#607D8B',
       light: '#bee4e1',
-      dark: '#0d7b6c',
+      dark: '#006652',
       contrastText: '#e5f4f3'
     },
     warning: {
@@ -43,19 +43,26 @@ const baseTheme = createTheme({
       contrastText: blue[50],
     },
     blueGray: {
-      light: blueGrey[300],
+      light: blueGrey['A400'],
       main: blueGrey[700],
       dark: blueGrey[900],
       contrastText: blueGrey[50],
-    },    
+    },
+    blueGray2: {
+      light: blueGrey['A200'],
+      main: blueGrey['A400'],
+      dark: blueGrey['A700'],
+      contrastText: blueGrey['A100'],
+    },
+
     orange: {
-      light: deepOrange['A100'],
+      light: deepOrange['100'],
       main: deepOrange['A400'],
       dark: deepOrange[900],
       contrastText: deepOrange[50],
     },    
     purple: {
-      light: deepPurple[400],
+      light: deepPurple[100],
       main: deepPurple['A400'],
       dark: deepPurple[900],
       contrastText: deepPurple[50],

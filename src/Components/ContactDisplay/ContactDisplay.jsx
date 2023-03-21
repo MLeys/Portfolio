@@ -4,7 +4,7 @@ import ContactForm from "../ContactForm/ContactForm";
 
 function ContactDisplay() {
   return ( 
-    <Container id='contact' sx={{ my: 15}} >
+    <Container id='contact' sx={{ my: 10}} >
       <ContactForm />
     </Container>
    );

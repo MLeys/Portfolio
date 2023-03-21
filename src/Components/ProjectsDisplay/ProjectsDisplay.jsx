@@ -13,7 +13,7 @@ import ProjectList from '../ProjectList/ProjectList';
 
 export default function ProjectsDisplay() {
   return (
-    <Container className='section' id='projects' >
+    <Container sx={{ my: 10 }} id='projects' >
       <Typography variant="h3" marked="center" align="center" component="h2">
         Projects
       </Typography>

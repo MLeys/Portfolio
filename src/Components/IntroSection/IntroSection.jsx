@@ -9,8 +9,8 @@ import theme from '../../theme';
 const AboutText = styled(Typography) ({
   fontSize: 16,
   fontWeight: 400,
-  color: theme.palette.text.secondary,
-  backgroundColor: theme.palette.secondary.light,
+  color: theme.palette.blueGray.contrastText,
+  backgroundColor: theme.palette.blueGray2.dark,
   padding: '5px 15px 5px 15px',
   lineHeight: 1.4,
   textAlign: 'left',
@@ -19,7 +19,7 @@ const AboutText = styled(Typography) ({
 
 function IntroSection() {
   return ( 
-    <Container sx={{ my: 20 }} id='intro' >
+    <Container sx={{ my: 0 }} id='intro' >
       <Typography variant='h4' component='h2' marginY={5} paddingTop={2}>
         About
       </Typography>
