@@ -18,14 +18,14 @@ import Stack from '@mui/material/Stack';
 import theme from '../../theme';
 
 const sections = [
-  { title: "About", link: "#intro" },
-  { title: "Technologies", link: "#tech" },
-  { title: "Projects", link: "#projects" },
-  { title: 'Resume', link: '20230222_Leys-Michael_Resume-v5.pdf'}
+  { title: "About", link: "#intro", target: '' },
+  { title: "Technologies", link: "#tech", target: '' },
+  { title: "Projects", link: "#projects", target: '' },
+  { title: 'Resume', link: '20230222_Leys-Michael_Resume-v5.pdf', target: '_blank' }
 ]
 
 const options = [
-  { title: 'Resume', link: '20230222_Leys-Michael_Resume-v5.pdf'},
+  { title: 'Resume', link: '20230222_Leys-Michael_Resume-v5.pdf', target: '_blank'},
   { title: 'Contact', link: '#contact'}
 ]
 
@@ -87,6 +87,7 @@ function MainHeader() {
                     variant='subtitle2'
                     underline='hover'
                     onClick={handleCloseNavMenu} 
+                    target={page.target}
                   >
                     {page.title}
                   </Link>
@@ -114,6 +115,7 @@ function MainHeader() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
                 href={page.link}
+                target={page.target}
               >
                 {page.title}
               </Button>
@@ -146,7 +148,7 @@ function MainHeader() {
                   Software Engineer
                 </Typography>
               </Stack>
-              <Box alignSelf='center' m={0} p={0} component={Link} href='http://www.linkedin.com/in/leysmike' >
+              <Box alignSelf='center' m={0} p={0} target='_blank' component={Link} href='http://www.linkedin.com/in/leysmike' >
                 <LinkedInIcon fontSize='large'/>
               </Box>
             </Stack>
@@ -175,6 +177,7 @@ function MainHeader() {
                     variant='subtitle2'
                     underline='hover'
                     onClick={handleCloseUserMenu} 
+                    target={option.target}
                   >
                     {option.title}
                   </Link>
