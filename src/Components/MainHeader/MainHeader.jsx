@@ -21,11 +21,11 @@ const sections = [
   { title: "About", link: "#intro", target: '' },
   { title: "Technologies", link: "#tech", target: '' },
   { title: "Projects", link: "#projects", target: '' },
-  { title: 'Resume', link: '20230222_Leys-Michael_Resume-v5.pdf', target: '_blank' }
+  { title: 'Resume', link: 'LeysMichael_Resume.pdf', target: '_blank' }
 ]
 
 const options = [
-  { title: 'Resume', link: '20230222_Leys-Michael_Resume-v5.pdf', target: '_blank'},
+  { title: 'Resume', link: 'LeysMichael_Resume.pdf', target: '_blank'},
   { title: 'Contact', link: '#contact'}
 ]
 
