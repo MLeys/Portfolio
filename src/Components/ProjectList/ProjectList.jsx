@@ -3,7 +3,8 @@ import List from '@mui/material/List';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemButton from '@mui/material/ListItemButton';
-import Paper from '@mui/material/Paper'
+import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
 import LaunchIcon from '@mui/icons-material/Launch';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TerminalIcon from '@mui/icons-material/Terminal';
@@ -12,8 +13,9 @@ import theme from '../../theme';
 
 
 const CustomList = styled(List) ({
-  backgroundColor: theme.palette.blueGray.dark,
-  color: theme.palette.common.black,
+  // backgroundColor: theme.palette.secondary.dark,
+  backgroundColor: theme.palette.blueGray.light,
+  // color: theme.palette.common.black,
   '& .MuiListItemIcon-root': {
     alignContent: 'right',
     justifyContent: 'right',
@@ -47,36 +49,42 @@ export default function ProjectList( { project }) {
   const featuresInfo = project.features.join(', ')
 
   return (
-    <Paper elevation={20}>
+    <Box pl={2} bgcolor='blueGray.light' >
       <CustomList className='customList'>
-        <ListItemButton className='projectListItem' component='a' href={project.deploymentUrl}>
-          <ListItemIcon>
-            <LaunchIcon />
-          </ListItemIcon>
-          <ListItemText
-            primary={project.title}
-            secondary={project.about}
-          />
-        </ListItemButton>
-        <ListItemButton className='projectListItem'  component='a' href={project.gitHubUrl} >
-          <ListItemIcon >
-            <GitHubIcon />
-          </ListItemIcon>
-          <ListItemText
-            primary="Features"
-            secondary={featuresInfo}
-          />
-        </ListItemButton>
-        <ListItemButton className='projectListItem' >
-          <ListItemIcon>
-            <TerminalIcon />
-          </ListItemIcon>
-          <ListItemText
-            primary="Tech"
-            secondary={techInfo}
-          />
-        </ListItemButton>
+        <Paper elevation={5} sx={{  backgroundColor: 'blueGray.dark', mx: 0, mb: .5}}>
+          <ListItemButton className='projectListItem' component='a' href={project.deploymentUrl}>
+            <ListItemIcon>
+              <LaunchIcon />
+            </ListItemIcon>
+            <ListItemText
+              primary={project.title}
+              secondary={project.about}
+            />
+          </ListItemButton>
+        </Paper>
+        <Paper elevation={5} sx={{  backgroundColor: 'blueGray.dark', mx: 0, mb: .5}}>
+          <ListItemButton className='projectListItem'  component='a' href={project.gitHubUrl} >
+            <ListItemIcon >
+              <GitHubIcon />
+            </ListItemIcon>
+            <ListItemText
+              primary="Features"
+              secondary={featuresInfo}
+            />
+          </ListItemButton>
+        </Paper>
+        <Paper elevation={5} sx={{  backgroundColor: 'blueGray.dark', mx: 0, mb: .5}}>
+          <ListItemButton className='projectListItem' >
+            <ListItemIcon>
+              <TerminalIcon />
+            </ListItemIcon>
+            <ListItemText
+              primary="Tech"
+              secondary={techInfo}
+            />
+          </ListItemButton>
+        </Paper>
       </CustomList>
-    </Paper>
+    </Box>
   );
 }

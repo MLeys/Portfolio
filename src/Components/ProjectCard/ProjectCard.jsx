@@ -28,7 +28,7 @@ function ProjectCard({ project }) {
         >
           Check it out!
         </Typography>
-        <Ribbon>{project.title}</Ribbon>
+        <Ribbon sx={{ display: {}}}>{project.title}</Ribbon>
       </CenteringBox>
     </ImageButton>
   );
