@@ -1,9 +1,10 @@
 import React from "react";
-import { Technologies } from '../../lists/technologies';
+import { Technologies, Tools } from '../../lists/technologies';
 import { IconBackdrop, IconButton } from '../StyledComps/StyledComps';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Chip from '@mui/material/Chip';
 
 
 const backgroundImage =
@@ -23,15 +24,15 @@ function TechDisplay() {
   return ( 
     <Container  sx={{ my: 10 }} id='tech' >
       <Typography variant='h3' component='h3' m={5} p={1} color='common.white'>
-        Experience
+        Technologies
       </Typography>
       <Box sx={{ mt: 4, display: 'flex', flexWrap: 'wrap' , justifyContent: 'center'}}>
         {Technologies.map((tech, index) => (
           <IconButton
             key={tech.title}
             style={{
-              width: 80,
-              height: 80,
+              width: 100,
+              height: 100,
               margin: 2,
             }}
           >
@@ -75,8 +76,30 @@ function TechDisplay() {
               </Typography>
             </Box>
           </IconButton>
-        ))}
+        ))} 
       </Box>
+      <Typography mt={4} variant="h6" fontSize={24}> Other Tools, Systems, and Authentication</Typography>
+      <Box
+        display='flex'
+        justifyContent='center'
+        flexWrap='wrap'
+        p={1}
+        m={1}
+      >
+        
+        {Tools.map((tool) => (
+        <Box m={.5}>
+          <Chip color="blue" label={tool.title}/>
+        </Box>
+          
+        ))}
+      </Box> 
+      <Typography sx={{ fontSize: 10}}>
+         Currently exploring a primary focus of interest.
+      </Typography>
+      <Typography sx={{ fontSize: 10}}>
+         Daily practice learning and understanding the low level Rust programming language, and further developing existing skills such as Javascript, React, Express, and Node.js. 
+      </Typography>
     </Container>
     
    );
