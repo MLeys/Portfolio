@@ -8,7 +8,7 @@ import theme from '../../theme';
 
 const AboutText = styled(Typography) ({
   fontSize: 16,
-  fontWeight: 400,
+  fontWeight: 300,
   color: theme.palette.blueGray.contrastText,
   backgroundColor: theme.palette.blueGray2.dark,
   padding: '5px 15px 5px 15px',
@@ -39,8 +39,13 @@ function IntroSection() {
           <Paper elevation={15} square >
             <AboutText >
               Hello! My name is Mike and I an excited to enter the tech industry as a 
-              <a className='highlight'> software engineer </a>! My appetite for 
+              <a className='highlight'> software engineer</a>! My appetite for 
               self-improvement, growth, and learning drive me to become better every day.
+            </AboutText>
+            <AboutText>
+              I am developed a passion for coding working a self trained Applications Engineer where I 
+              had the opportunity to create solutions that solved business problems, streamline processes,
+               increased productivity.
             </AboutText>
             <AboutText >
               Earned experience in leading teams, office meetings, presentations, projects, and running 
