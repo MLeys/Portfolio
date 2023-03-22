@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
+import GitHubIcon from '@mui/icons-material/GitHub';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -25,7 +25,7 @@ const sections = [
 ]
 
 const options = [
-  { title: 'Resume', link: 'LeysMichael_Resume.pdf', target: '_blank'},
+  // { title: 'Resume', link: 'LeysMichael_Resume.pdf', target: '_blank'},
   { title: 'Contact', link: '#contact'}
 ]
 
@@ -122,8 +122,19 @@ function MainHeader() {
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }} >
+            
             <Stack direction='row'>
-              <Tooltip title="Options">
+              <Box alignSelf='center' m={0} pr={1} target='_blank' component={Link} href='http://www.linkedin.com/in/leysmike' >
+                <Tooltip title="Check out my LinkedIn!">
+                  <LinkedInIcon fontSize='large'/>
+                </Tooltip>
+              </Box>
+              <Box alignSelf='center' m={0} p={0} target='_blank' component={Link} href='https://github.com/MLeys' >
+                <Tooltip title="See all of my projects on my GitHub!">
+                  <GitHubIcon fontSize='large'/>
+                </Tooltip>
+              </Box>
+              <Tooltip title="Contact me!">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 1 }}>
                   <Avatar alt="MyAvatar" src="https://imgur.com/FPjCW0h.png" />
                 </IconButton>
@@ -148,9 +159,7 @@ function MainHeader() {
                   Software Engineer
                 </Typography>
               </Stack>
-              <Box alignSelf='center' m={0} p={0} target='_blank' component={Link} href='http://www.linkedin.com/in/leysmike' >
-                <LinkedInIcon fontSize='large'/>
-              </Box>
+
             </Stack>
             
             <Menu
