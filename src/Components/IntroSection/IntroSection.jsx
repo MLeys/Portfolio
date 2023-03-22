@@ -43,7 +43,7 @@ function IntroSection() {
               self-improvement, growth, and learning drive me to become better every day.
             </AboutText>
             <AboutText>
-              I am developed a passion for coding working a self trained Applications Engineer where I 
+              I developed a passion for coding working a self trained Applications Engineer where I 
               had the opportunity to create solutions that solved business problems, streamline processes,
                increased productivity.
             </AboutText>
