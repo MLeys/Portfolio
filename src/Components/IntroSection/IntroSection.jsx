@@ -38,23 +38,31 @@ function IntroSection() {
         <Grid xs={12} sm={8}  >
           <Paper elevation={15} square >
             <AboutText >
-              Hello! My name is Mike and I an excited to enter the tech industry as a 
+              Hello! My name is Mike and I am excited to enter the tech industry as a 
               <a className='highlight'> software engineer</a>! My appetite for 
               self-improvement, growth, and learning drive me to become better every day.
             </AboutText>
             <AboutText>
-              I developed a passion for coding working a self trained Applications Engineer where I 
-              had the opportunity to create solutions that solved business problems, streamline processes,
-               increased productivity.
+              I was drawn to programming at an early age customizing controls in CS (Counter-Strike) 
+              back around the 2000's. My interest in coding was supercharged during my experiences 
+              creating machine vision applications to solve issues and increase quality and productivity
+              in my previous position as an Applications Engineer.
+              Driven by that passion I most recently took a leap of faith and completed the 
+              SEI bootcamp at General Assembly.
+            </AboutText>
+            <AboutText>
+              I thrive on solving business problems and developing elegant solutions working 
+              in and outside of a team environment. If I do not know immdeiately how to solve a problem
+              I spare no effort in my attemps to present a solution!
             </AboutText>
             <AboutText >
               Earned experience in leading teams, office meetings, presentations, projects, and running 
-              a painting business have endowed me with a rare skill set in the industry. I'm 
-              detail orientied and strive to only put my best self out into the world.
+              a painting business have endowed me with a rare skill set in the industry. I hold myself to a high 
+              standard and strive to only put my best self out into the world.
             </AboutText>
             <AboutText  >
-             My focused ambition, respect (especially of my time), self-driven accountibility, 
-             and action-oriented practices have proven invaluable to my successes. 
+              My focused ambition, self-driven growth, appetite for learning, action-oriented practices, 
+              and demonstated experiences make me indispensable 
             </AboutText>
             <AboutText >
               Outside of the office I enjoy playing team sports, 
