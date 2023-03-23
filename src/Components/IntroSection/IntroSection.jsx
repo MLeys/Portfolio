@@ -47,12 +47,12 @@ function IntroSection() {
               back around the 2000's. My interest in coding was supercharged during my experiences 
               creating machine vision applications to solve issues and increase quality and productivity
               in my previous position as an Applications Engineer.
-              Driven by that passion I most recently took a leap of faith and completed the 
+              Driven by that passion, I most recently took a leap of faith and completed the 
               SEI bootcamp at General Assembly.
             </AboutText>
             <AboutText>
               I thrive on solving business problems and developing elegant solutions working 
-              in and outside of a team environment. If I do not know immdeiately how to solve a problem
+              in and outside of a team environment. If I do not know immdeiately how to solve a problem,
               I spare no effort in my attemps to present a solution!
             </AboutText>
             <AboutText >
