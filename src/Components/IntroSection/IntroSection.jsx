@@ -52,8 +52,8 @@ function IntroSection() {
             </AboutText>
             <AboutText>
               I thrive on solving business problems and developing elegant solutions working 
-              in and outside of a team environment. If I do not know immdeiately how to solve a problem,
-              I spare no effort in my attemps to present a solution!
+              in and outside of a team environment. If I do not know immediately how to solve a problem,
+              I spare no effort in my attempts to present a solution!
             </AboutText>
             <AboutText >
               Earned experience in leading teams, office meetings, presentations, projects, and running 
@@ -62,7 +62,7 @@ function IntroSection() {
             </AboutText>
             <AboutText  >
               My focused ambition, self-driven growth, appetite for learning, action-oriented practices, 
-              and demonstated experiences make me indispensable 
+              and demonstrated experiences make me indispensable.
             </AboutText>
             <AboutText >
               Outside of the office I enjoy playing team sports, 
