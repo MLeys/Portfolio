@@ -38,14 +38,20 @@ function IntroSection() {
         <Grid xs={12} sm={8}  >
           <Paper elevation={15} square >
             <AboutText>
-              
+            Hello! My name is Mike and I am a 
+              <a className='highlight'> software engineer</a>!
+            </AboutText>
+            <AboutText>
+              My determination to succeed, coupeled with my appetite for growth, drives my aspiration
+              to become the best possible version of myself. I comprehensive daily regime 
+              that fosters constant and consitant growth an improvement. 
+            </AboutText>
+            <AboutText>
+              You can expect me to never accept a minimal result and to always produce to the 
+              best of my ability.
             </AboutText>
 
-            <AboutText >
-              Hello! My name is Mike and I am excited to enter the tech industry as a 
-              <a className='highlight'> software engineer</a>! My appetite for 
-              self-improvement, growth, and learning drive me to become better every day.
-            </AboutText>
+            {/* Drop down menu here */}
             <AboutText>
               I was drawn to programming at an early age customizing controls in CS (Counter-Strike) 
               back around the 2000's. My interest in coding was supercharged during my experiences 
