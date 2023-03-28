@@ -4,6 +4,7 @@ import Paper from '@mui/material/Paper';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
+import theme from '../../theme';
 
 import { Projects } from '../../lists/projects';
 
@@ -13,21 +14,36 @@ import ProjectList from '../ProjectList/ProjectList';
 
 export default function ProjectsDisplay() {
   return (
-    <Container sx={{ my: 10 }} id='projects' >
-      <Typography variant="h3" marked="center" align="center" component="h2">
+    <Container 
+      id='projects'
+      sx={{
+        my: 15,
+        backgroundColor: theme.palette.blueGray.main,
+        paddingBottom: 15,
+      }}  
+    >
+      <Typography 
+        variant="h3" 
+        component="h2"
+        paddingTop={12}
+        paddingBottom={2}
+      >
         Projects
       </Typography>
       {Projects.map((project, index) => (
-        <Grid container mt={5} key={`container-${index}`} >
-          <Grid xs={12} sm={6}>
-            <ProjectCard project={project} />
+        <Box mx={1} p={1} my={5} bgcolor='blueGray.light' >
+          <Grid container my={1} key={`container-${index}`} >
+            <Grid xs={12} sm={6}>
+              <ProjectCard project={project} />
+            </Grid>
+            <Grid xs={12} sm={6}>
+              <Paper elevation={0} >
+                <ProjectList project={project} />
+              </Paper>
+            </Grid>
           </Grid>
-          <Grid xs={12} sm={6}>
-            <Paper elevation={0} square={true}>
-              <ProjectList project={project} />
-            </Paper>
-          </Grid>
-        </Grid>
+        </Box>
+
       ))}
     </Container>
   );

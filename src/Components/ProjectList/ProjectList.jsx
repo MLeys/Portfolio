@@ -49,7 +49,7 @@ export default function ProjectList( { project }) {
   const featuresInfo = project.features.join(', ')
 
   return (
-    <Box pl={2} bgcolor='blueGray.light' >
+    
       <CustomList className='customList'>
         <Paper elevation={5} sx={{  backgroundColor: 'blueGray.dark', mx: 0, mb: .5}}>
           <ListItemButton className='projectListItem' component='a' target='_blank' href={project.deploymentUrl}>
@@ -85,6 +85,6 @@ export default function ProjectList( { project }) {
           </ListItemButton>
         </Paper>
       </CustomList>
-    </Box>
+    
   );
 }

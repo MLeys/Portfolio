@@ -61,17 +61,17 @@ function IntroSection() {
 
   return ( 
     <Container 
+    
       id='intro'
       my={0} 
-      style={{
+      sx={{
         backgroundColor: theme.palette.secondary.main,
         minHeight: '80vh',
         alignContent: 'center',
         verticalAlign: 'middle',
-
       }} 
     >
-      <Typography variant='h4' component='h2' marginTop={0} paddingTop={10}>
+      <Typography variant='h3' component='h2' marginTop={0} paddingTop={10}>
         About
       </Typography>
       <Grid 

@@ -43,14 +43,14 @@ const baseTheme = createTheme({
       contrastText: blue[50],
     },
     blueGray: {
-      light: blueGrey['A400'],
+      light: blueGrey[400],
       main: blueGrey[700],
       dark: blueGrey[900],
       contrastText: blueGrey[50],
     },
     blueGray2: {
       light: blueGrey['A200'],
-      main: blueGrey['A400'],
+      main: blueGrey[800],
       dark: blueGrey['A700'],
       contrastText: blueGrey['A100'],
     },

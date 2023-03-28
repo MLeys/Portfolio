@@ -22,8 +22,15 @@ const sxBackground = {
 
 function TechDisplay() {
   return ( 
-    <Container  sx={{ my: 10 }} id='tech' >
-      <Typography variant='h3' component='h3' m={5} p={1} color='common.white'>
+    <Container  
+      id='tech'
+      sx={{
+        my: 15,
+        minHeight: '80vh',
+        paddingBottom: 10,
+      }} 
+    >
+      <Typography variant='h3' component='h2' m={5} p={1} >
         Technologies
       </Typography>
       <Box sx={{ mt: 4, display: 'flex', flexWrap: 'wrap' , justifyContent: 'center'}}>
