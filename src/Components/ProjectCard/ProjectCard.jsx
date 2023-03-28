@@ -13,12 +13,17 @@ function ProjectCard({ project }) {
     <ImageButton
       key={project.title}
       LinkComponent='a'
+      target='_blank'
       href={project.deploymentUrl}
       sx={{
         width: '90%',
       }}
     >
-      <ImageBox elevation={20} className="projectBackdrop" sx={{ backgroundImage: `url(${project.thumbnailUrl})` }} />
+      <ImageBox elevation={20} 
+            LinkComponent='a'
+            target='_blank'
+            href={project.deploymentUrl}
+            className="projectBackdrop" sx={{ backgroundImage: `url(${project.thumbnailUrl})` }} />
       <CenteringBox>
         <Typography
           component="h3"

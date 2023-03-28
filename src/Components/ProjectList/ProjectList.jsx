@@ -52,7 +52,7 @@ export default function ProjectList( { project }) {
     <Box pl={2} bgcolor='blueGray.light' >
       <CustomList className='customList'>
         <Paper elevation={5} sx={{  backgroundColor: 'blueGray.dark', mx: 0, mb: .5}}>
-          <ListItemButton className='projectListItem' component='a' href={project.deploymentUrl}>
+          <ListItemButton className='projectListItem' component='a' target='_blank' href={project.deploymentUrl}>
             <ListItemIcon>
               <LaunchIcon />
             </ListItemIcon>
@@ -63,7 +63,7 @@ export default function ProjectList( { project }) {
           </ListItemButton>
         </Paper>
         <Paper elevation={5} sx={{  backgroundColor: 'blueGray.dark', mx: 0, mb: .5}}>
-          <ListItemButton className='projectListItem'  component='a' href={project.gitHubUrl} >
+          <ListItemButton className='projectListItem'  component='a' target='_blank' href={project.gitHubUrl} >
             <ListItemIcon >
               <GitHubIcon />
             </ListItemIcon>
