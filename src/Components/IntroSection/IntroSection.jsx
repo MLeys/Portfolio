@@ -92,16 +92,18 @@ function IntroSection() {
 
 
             <AboutText sx={{paddingBottom: 2}} > </AboutText>
-            <AboutText>
+            <AboutText sx={showSummary}> Hello, my name is Mike!</AboutText>
+            <AboutText sx={showSummary}>
+                I'm a determined <a className='highlight'> software engineer </a>
+                with a strong drive for personal and professional growth. I am committed 
+                to producing the best possible outcome and continually improving my skills 
+                through a rigorous daily routine. My goal is to push the limits and achieve 
+                excellence in everything I do.
+            </AboutText>
+
+            <AboutText sx={showDetails}>
               Hello! My name is Mike and I am a 
               <a className='highlight'> software engineer</a>!
-            </AboutText>
-            <AboutText sx={showSummary}>
-              Hi, I'm Mike, a driven <a className='highlight'> software engineer </a>
-               dedicated to achieving excellence in everything I do. With a strong focus 
-               on continuous learning and improvement, I am constantly seeking out new challenges 
-               to further develop my skills and 
-              expertise.
             </AboutText>
             <AboutText sx={showDetails}>
               I am driven by a deep determination to succeed and a 
