@@ -28,7 +28,7 @@ function LandingContent() {
           letterSpacing: '.3rem' 
         }}
       >
-        Software Engineer - Full Stack Developer
+        Software Engineer - Full Stack Development
       </Typography>
       <Button
         className="landingButton"
