@@ -24,18 +24,18 @@ const AboutText = styled(Typography) ({
 const AboutToggleButton = styled(ToggleButton) ({
   backgroundColor: theme.palette.blueGray.dark,
   borderRadius: 0,
-  color: theme.palette.blueGray.contrastText,
+  color: theme.palette.blueGray2.contrastText,
   "&.Mui-selected": {
-    color: "white",
+    color: theme.palette.blueGray.contrastText,
+    backgroundColor: theme.palette.blueGray.dark
+  },
+  "&.Mui-disabled": {
+    color: theme.palette.secondary.light,
     backgroundColor: theme.palette.blueGray2.dark
   },
-  '&:hover': {
-    color: 'black',
+  "&.Mui-selected:hover, &:hover": {
+    color: theme.palette.common.black,
     backgroundColor: theme.palette.primary.main,
-  },
-  "&.Mui-selected:hover": {
-    color: theme.palette.secondary.main,
-    backgroundColor: theme.palette.blueGray2.dark
   },
 })
 
@@ -62,7 +62,6 @@ function IntroSection() {
     }
     setIsShow(!isShow)
   }
-
   function handleChange() {
 
   }
