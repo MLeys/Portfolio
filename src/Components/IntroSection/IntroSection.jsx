@@ -7,17 +7,9 @@ import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material';
 import Button from '@mui/material/Button';
 import ToggleButton from '@mui/material/ToggleButton';
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import theme from '../../theme';
-
-const textStyleSchema = {
-  fontSize: 16,
-  fontWeight: 300,
-  color: theme.palette.blueGray.contrastText,
-  backgroundColor: theme.palette.blueGray2.dark,
-  padding: '5px 15px 5px 15px',
-  lineHeight: 1.4,
-  textAlign: 'left',
-}
+import { blue } from '@mui/material/colors';
 
 const AboutText = styled(Typography) ({
     fontSize: 16,
@@ -30,27 +22,49 @@ const AboutText = styled(Typography) ({
 })
 
 const AboutToggleButton = styled(ToggleButton) ({
-  textStyleSchema
+  backgroundColor: theme.palette.blueGray.dark,
+  borderRadius: 0,
+  color: theme.palette.blueGray.contrastText,
+  "&.Mui-selected": {
+    color: "white",
+    backgroundColor: theme.palette.blueGray2.dark
+  },
+  '&:hover': {
+    color: 'black',
+    backgroundColor: theme.palette.primary.main,
+  },
+  "&.Mui-selected:hover": {
+    color: theme.palette.secondary.main,
+    backgroundColor: theme.palette.blueGray2.dark
+  },
 })
 
 
 function IntroSection() {
-  const [showDetails, setShowDetails] = useState({ display: 'none'})
-  const [showBtnText, setShowBtnText] = useState('More about me!')
-  const [isShow, setIsShow] = useState(false)
-  const [showSummary, setShowSummary] = useState({display: {xs: 'block'}})
+  const [showDetails, setShowDetails] = useState({ display: 'none'});
+  const [showBtnText, setShowBtnText] = useState('More about me!');
+  const [isShow, setIsShow] = useState(false);
+  const [showSummary, setShowSummary] = useState({display: {xs: 'block'}});
+  const [version, setVersion] = useState('summary');
   
   function handleClickDetails(){
     if (isShow) {
+      setVersion('detailed')
       setShowDetails({ display: 'none'})
       setShowSummary({display: {xs: 'block'}})
+      
       setShowBtnText('Click for detailed version...')
     } else {
+      setVersion('summary')
       setShowDetails({display: { xs: 'block' }})
       setShowSummary({display: 'none'})
       setShowBtnText('Click for summary version...')
     }
     setIsShow(!isShow)
+  }
+
+  function handleChange() {
+
   }
 
   return ( 
@@ -73,30 +87,39 @@ function IntroSection() {
         </Grid>
         <Grid xs={12} sm={8}  >
           <Paper elevation={15} square >
+            <ToggleButtonGroup
+              fullWidth
+              value={version}
+              exclusive
+              onChange={handleClickDetails}
+              aria-label='AboutVersion'  
+              sx={{ backgroundColor: 'blueGray2'}}
+            >
+              <AboutToggleButton disabled={!isShow} value="summary">Short</AboutToggleButton>
+              <AboutToggleButton disabled={isShow} value="detailed">Detailed</AboutToggleButton>
+            </ToggleButtonGroup>
+
+
+
             <AboutText>
             Hello! My name is Mike and I am a 
               <a className='highlight'> software engineer</a>!
             </AboutText>
-            <AboutText sx={showSummary}>
+            {/* <AboutText sx={showSummary}>
               As a software engineer, I am driven by a deep determination to succeed and a 
               strong appetite for personal and professional growth. You can rely on me to put 
               in the hard work necessary to produce the best possible outcome. Every day, I 
               follow a comprehensive routine that enables me to continuously improve and 
               develop new skills. My goal is to become the best possible version of myself, 
               always pushing the limits and striving for excellence.
-            </AboutText>
-            <AboutText>
-              <Button 
-                onClick={handleClickDetails}
-                value='text'
-                variant='text' 
-                onChange={handleClickDetails}
-              >  
-                {showBtnText}
-              </Button>
+            </AboutText> */}
+            <AboutText sx={showSummary}>
+              Hi, I'm Mike, a driven software engineer dedicated to achieving excellence in 
+              everything I do. With a strong focus on continuous learning and improvement, 
+              I am constantly seeking out new challenges to further develop my skills and 
+              expertise.
             </AboutText>
 
- 
             {/* Drop down menu here */}
             <AboutText sx={showDetails}>
               I was drawn to programming at an early age, customizing controls in CS (Counter-Strike) 
