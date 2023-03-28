@@ -4,8 +4,8 @@ export const Projects = [
     title: "Skill.Map", 
     about: "A tool for tracking learning process and finding and storing resources",
     features: [ 
-      "MERN stack", 
-      "External API's ( including YouTube ) ",
+      "Search YouTube for resources and add to your skillset", 
+      "Organize your skills with additional subcategories",
     ],
     tech: [
       "Mongoose",  

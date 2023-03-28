@@ -37,6 +37,10 @@ function IntroSection() {
         </Grid>
         <Grid xs={12} sm={8}  >
           <Paper elevation={15} square >
+            <AboutText>
+              
+            </AboutText>
+
             <AboutText >
               Hello! My name is Mike and I am excited to enter the tech industry as a 
               <a className='highlight'> software engineer</a>! My appetite for 
