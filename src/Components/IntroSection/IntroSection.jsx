@@ -42,7 +42,6 @@ const AboutToggleButton = styled(ToggleButton) ({
 
 function IntroSection() {
   const [showDetails, setShowDetails] = useState({ display: 'none'});
-  const [showBtnText, setShowBtnText] = useState('More about me!');
   const [isShow, setIsShow] = useState(false);
   const [showSummary, setShowSummary] = useState({display: {xs: 'block'}});
   const [version, setVersion] = useState('summary');
@@ -52,18 +51,12 @@ function IntroSection() {
       setVersion('detailed')
       setShowDetails({ display: 'none'})
       setShowSummary({display: {xs: 'block'}})
-      
-      setShowBtnText('Click for detailed version...')
     } else {
       setVersion('summary')
       setShowDetails({display: { xs: 'block' }})
       setShowSummary({display: 'none'})
-      setShowBtnText('Click for summary version...')
     }
     setIsShow(!isShow)
-  }
-  function handleChange() {
-
   }
 
   return ( 
@@ -71,7 +64,6 @@ function IntroSection() {
       <Typography variant='h4' component='h2' marginY={5} paddingTop={2}>
         About
       </Typography>
-  
       <Grid 
         container 
         spacing={1}   
@@ -99,27 +91,26 @@ function IntroSection() {
             </ToggleButtonGroup>
 
 
-
+            <AboutText sx={{paddingBottom: 2}} > </AboutText>
             <AboutText>
-            Hello! My name is Mike and I am a 
+              Hello! My name is Mike and I am a 
               <a className='highlight'> software engineer</a>!
             </AboutText>
-            {/* <AboutText sx={showSummary}>
-              As a software engineer, I am driven by a deep determination to succeed and a 
+            <AboutText sx={showSummary}>
+              Hi, I'm Mike, a driven <a className='highlight'> software engineer </a>
+               dedicated to achieving excellence in everything I do. With a strong focus 
+               on continuous learning and improvement, I am constantly seeking out new challenges 
+               to further develop my skills and 
+              expertise.
+            </AboutText>
+            <AboutText sx={showDetails}>
+              I am driven by a deep determination to succeed and a 
               strong appetite for personal and professional growth. You can rely on me to put 
               in the hard work necessary to produce the best possible outcome. Every day, I 
               follow a comprehensive routine that enables me to continuously improve and 
               develop new skills. My goal is to become the best possible version of myself, 
               always pushing the limits and striving for excellence.
-            </AboutText> */}
-            <AboutText sx={showSummary}>
-              Hi, I'm Mike, a driven software engineer dedicated to achieving excellence in 
-              everything I do. With a strong focus on continuous learning and improvement, 
-              I am constantly seeking out new challenges to further develop my skills and 
-              expertise.
             </AboutText>
-
-            {/* Drop down menu here */}
             <AboutText sx={showDetails}>
               I was drawn to programming at an early age, customizing controls in CS (Counter-Strike) 
               back around the 2000s. My interest in coding was supercharged during my experiences 
@@ -147,6 +138,7 @@ function IntroSection() {
               any team. You can rely on me to put in the hard work necessary to produce the best 
               possible outcome.
             </AboutText>
+            <AboutText sx={{paddingBottom: 2}} > </AboutText>
           </Paper>
 
         </Grid>
