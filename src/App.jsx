@@ -30,6 +30,11 @@ function App() {
         <IntroSection />
         <TechDisplay />
         <ProjectsDisplay />
+          <p>Candidate: Knock, knock.</p>
+          <p>Employer: Who's there?</p>
+          <p>Candidate: Java.</p>
+          <p>Employer: Java who?</p>
+          <p>Candidate: Java seen my resume? I'm the perfect candidate for your software engineering position!</p>
         <ContactDisplay />
       </MainDiv>
     </ThemeProvider>
