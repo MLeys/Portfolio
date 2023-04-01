@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 
+import TechList from "../TechList/TechList";
 
 const backgroundImage =
   'https://imgur.com/ZflQePB.png';

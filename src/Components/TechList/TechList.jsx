@@ -1,28 +1,40 @@
-// base url from devicon.dev
-const BASEURL = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/'
+import {
+  Tools,
+  Authentications,
+  Languages,
+  Frameworks,
+  Databases,
+  Technologies,
+  SoftSkills,
+} from "../../lists/technologies"
 
-const TechList = [
-  {
-    name: 'JavaScript',
-    type: 'Language',
-    experience: 'Advanced',
-    img: `${BASEURL}javascript/javascript-original.svg`,
-    aboutExp: ""
-  },
-  {
-    name: 'Java',
-    type: 'Language',
-    experience: 'Advanced Beginner',
-    img: `${BASEURL}java/java-original.svg`,
-    aboutExp: 'I completed a course on the language in winter 2021 at Grand Rapids Community College',
-  },
-  // {
-  //   name: '',
-  //   type: '',
-  //   experience: '',
-  //   img: `${BASEURL}`,
-  //   aboutExp: '',
-  // },
+const tools = Tools.map(tool => tool.title);
+console.log(tools);
 
-]
+const authentications = Authentications.map(auth => auth.title);
+console.log(authentications)
+
+const languages = Languages.map(language => language.title);
+const frameworks = Frameworks.map(framework => framework.title);
+const databases = Databases.map(database => database.title)
+const technologies = Technologies.map(tech => tech.title);
+const softskills = SoftSkills.map(skill => skill.title);
+
+const allSkills = [...tools, ...authentications, ...languages, ...frameworks, ...databases, ...technologies, ...softskills]
+console.log(allSkills, '<<<<< ALL SKILLS')
+
+function TechList() {
+
+  
+  
+  return ( 
+    <>
+      skills
+    </>
+
+   );
+}
+
+
+
 export default TechList;
