@@ -20,7 +20,7 @@ function ProjectCard({ project }) {
       }}
     >
       <ImageBox elevation={20} 
-            LinkComponent='a'
+            
             target='_blank'
             href={project.deploymentUrl}
             className="projectBackdrop" sx={{ backgroundImage: `url(${project.thumbnailUrl})` }} />

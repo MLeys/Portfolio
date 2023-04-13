@@ -4,6 +4,8 @@ import { ThemeProvider } from '@mui/material/styles';
 
 import styled from '@emotion/styled';
 
+import * as codewarsApi from '././utils/codewarsApi.js'
+
 import MainHeader from './Components/MainHeader/MainHeader';
 import LandingDisplay from './Components/LandingDisplay/LandingDisplay';
 import IntroSection from './Components/IntroSection/IntroSection';
@@ -32,10 +34,24 @@ const MainDiv = styled('div') ({
 const eventsUrl = 'https://api.github.com/users/mleys/events'
 
 
-
-
 function App() {
   const [activity, setActivity] = useState([]);
+
+
+
+  async function codewarsData(){
+    await fetch("https://www.codewars.com/api/v1/users/mleys")
+    .then(response => response.json())
+    .then(data => {
+      // Process the user object here
+      console.log(data);
+    })
+    .catch(error => {
+      // Handle any errors here
+      console.error(error);
+    });
+  }
+
 
   async function getGitHubActivity() {
     const response = await fetch(`${eventsUrl}`);
@@ -46,7 +62,7 @@ function App() {
       (event) => event.type === "PushEvent" && event.payload.commits
     );
 
-    console.log(pushEventsOnly, "<<< PUSH EVENTS ONLY")
+    // console.log(pushEventsOnly, "<<< PUSH EVENTS ONLY")
 
     const eventsObj = await pushEventsOnly.map(event => ({
       repo: event.repo.name.slice(6, event.repo.name.length),
@@ -54,15 +70,15 @@ function App() {
       commits: event.payload.commits,
       message: event.payload.commits[0].message,
     }))
-    console.log(eventsObj)
+    // console.log(eventsObj)
     setActivity(eventsObj)
   }
 
 
 
-
   useEffect(() => {
     getGitHubActivity();
+    codewarsData();
   }, []); 
 
   return (

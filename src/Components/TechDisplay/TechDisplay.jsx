@@ -1,5 +1,5 @@
 import React from "react";
-import { Technologies, Tools } from '../../lists/technologies';
+import {  Tools } from '../../lists/technologies';
 import { IconBackdrop, IconButton } from '../StyledComps/StyledComps';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -22,6 +22,7 @@ const sxBackground = {
 }
 
 function TechDisplay() {
+  const Technologies = []
   return ( 
     <Container  
       id='tech'
@@ -37,7 +38,7 @@ function TechDisplay() {
       <Box sx={{ mt: 4, display: 'flex', flexWrap: 'wrap' , justifyContent: 'center'}}>
         {Technologies.map((tech, index) => (
           <IconButton
-            key={tech.title}
+            key={`tech-${index}`}
             style={{
               width: 100,
               height: 100,
@@ -95,8 +96,8 @@ function TechDisplay() {
         m={1}
       >
         
-        {Tools.map((tool) => (
-        <Box m={.5}>
+        {Tools.map((tool, index) => (
+        <Box m={.5} key={`tool-${index}`}>
           <Chip color="blue" label={tool.title}/>
         </Box>
           

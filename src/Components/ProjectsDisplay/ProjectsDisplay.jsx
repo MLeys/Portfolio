@@ -31,7 +31,7 @@ export default function ProjectsDisplay() {
         Projects
       </Typography>
       {Projects.map((project, index) => (
-        <Box mx={1} p={1} my={5} bgcolor='blueGray.light' >
+        <Box key={`project-${index}`} mx={1} p={1} my={5} bgcolor='blueGray.light' >
           <Grid container my={1} key={`container-${index}`} >
             <Grid xs={12} sm={6}>
               <ProjectCard project={project} />
