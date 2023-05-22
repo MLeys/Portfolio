@@ -21,6 +21,7 @@ const sections = [
   { title: "About", link: "#intro", target: '' },
   { title: "Technologies", link: "#tech", target: '' },
   { title: "Projects", link: "#projects", target: '' },
+  { title: "Games", link: "#games", target: '' },
   { title: 'Resume', link: 'LeysMichael_Resume.pdf', target: '_blank' }
 ]
 

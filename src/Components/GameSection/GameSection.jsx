@@ -29,9 +29,10 @@ function GameSection() {
   }
 
   return (
-    <Grid container>
+    <Grid container >
       <Grid xs={12}>
       <Typography 
+        id="games"
         variant="h3" 
         component="h2"
         paddingTop={2}
@@ -40,7 +41,7 @@ function GameSection() {
         Games
       </Typography>
       </Grid>
-      <Grid xs={12}>
+      <Grid xs={12} >
         {Games.map((game) => (
           <Button 
             key={game.index} 
