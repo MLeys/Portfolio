@@ -13,6 +13,7 @@ import ProjectsDisplay from './Components/ProjectsDisplay/ProjectsDisplay';
 import TechDisplay from './Components/TechDisplay/TechDisplay';
 import ContactDisplay from './Components/ContactDisplay/ContactDisplay';
 import ContactForm from './Components/ContactForm/ContactForm';
+import GameSection from './Components/GameSection/GameSection';
 
 import theme from './theme';
 
@@ -88,6 +89,7 @@ function App() {
       <LandingDisplay />
       <IntroSection  />
       <TechDisplay />
+      <GameSection />
       <ProjectsDisplay />
         <p>Candidate: Knock, knock.</p>
         <p>Employer: Who's there?</p>

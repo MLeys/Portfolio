@@ -1,10 +1,15 @@
 import React from "react";
+import { styled } from '@mui/system';
 import {  Tools } from '../../lists/technologies';
 import { IconBackdrop, IconButton } from '../StyledComps/StyledComps';
+
+
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
+import Paper from '@mui/material/Paper';
+
 
 import TechList from "../TechList/TechList";
 
@@ -17,9 +22,23 @@ const sxBackground = {
   marginTop: 0,
   backgroundImage: `url(${backgroundImage})`,
   backgroundColor: '#4d2e00', 
-  backgroundPosition: 'center',
-  
+  backgroundPosition: 'center', 
 }
+
+const TechSubSection = styled( Paper )({
+  
+  elevation: 16,
+  backgroundColor: 'black',
+  color: 'white',
+})
+
+const SubTitle = styled( Typography )({
+  varient: "h6",
+  fontSize: 24,
+  color: 'blueGray2.light',
+  padding: 8,
+  borderRadius: 4,
+})
 
 function TechDisplay() {
   const Technologies = []
@@ -87,6 +106,13 @@ function TechDisplay() {
           </IconButton>
         ))} 
       </Box>
+
+      <TechSubSection>
+        <SubTitle >
+          Subtitle here
+        </SubTitle>
+      </TechSubSection>
+
       <Typography mt={4} variant="h6" fontSize={24}> Other Tools, Systems, and Authentication</Typography>
       <Box
         display='flex'
