@@ -1,5 +1,59 @@
 // base url from devicon.dev
 const BASEURL = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/'
+// const BASEURL = 'https://github.com/devicons/devicon/tree/v2.15.1/icons/'
+
+export const Primary = [
+  {
+    title: 'React.js',
+    level: 'Intermediate',
+    url: `${BASEURL}react/react-original-wordmark.svg`
+  },
+  {
+    title: 'JavaScript',
+    level: 'Advanced',
+    url: `${BASEURL}javascript/javascript-original.svg`,
+  },
+  {
+    title: 'Rust',
+    level: 'Beginner',
+    url: `${BASEURL}rust/rust-plain.svg`
+  },
+  {
+    title: 'HTML5',
+    level: 'Advanced Beginner',
+    url: `${BASEURL}html5/html5-original-wordmark.svg`
+  },
+  {
+    title: 'CSS',
+    level: 'Advanced Beginner',
+    url: `${BASEURL}css3/css3-original-wordmark.svg`
+  },
+  {
+    title: 'TypeScript',
+    level: 'Beginner',
+    url: `${BASEURL}typescript/typescript-original.svg`,
+  },
+  {
+    title: 'Node.js',
+    level: 'Advanced',
+    url: `${BASEURL}nodejs/nodejs-original.svg`
+  },
+  {
+    title: 'Mongoose',
+    level: 'Intermediate',
+    url: `https://cms-assets.tutsplus.com/uploads/users/34/posts/29527/preview_image/mongoose.jpg`
+  },
+  {
+    title: 'Express',
+    level: 'Intermediate',
+    url: `${BASEURL}express/express-original.svg`
+  },    
+  {
+    title: 'RESTful APIs',
+    level: '',
+    url: `${BASEURL}`
+  },
+]
 
 export const Tools = [
   {
