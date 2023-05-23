@@ -12,6 +12,10 @@ export default function TechIcon({ tech }) {
     setHasImageError(true);
   };
 
+  function handleTouchTechIcon(e) {
+
+  }
+
   return (
     <IconButton
       style={{
@@ -36,6 +40,9 @@ export default function TechIcon({ tech }) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          color: 'black',
+          bgcolor: 'blueGrayLight.dark',
+          borderRadius: 50,
         }}
       >
 
@@ -56,7 +63,7 @@ export default function TechIcon({ tech }) {
             }}
           >
             <Typography
-              color="common.white"
+
               className="iconTitle"
               sx={{ opacity: 0}}
             >
@@ -67,18 +74,24 @@ export default function TechIcon({ tech }) {
           <img
             src={tech.url}
             onError={handleImageError}
-            alt={tech.title}
+            alt={`${tech.title}`}
+            onTouchStart={handleTouchTechIcon}
             style={{
               width: '100%',
               height: '100%',
               objectFit: 'cover',
+              color: 'black',
+              justifyContent: 'center',
+              alignItems: 'center',
+              display: 'flex',
+
             }}
           />
           </>
         )}
         {hasImageError && (
           <Typography
-            color="blueGrayLight.contrastText"
+            
             sx={{
               position: 'absolute',
               fontSize: '1.2rem',

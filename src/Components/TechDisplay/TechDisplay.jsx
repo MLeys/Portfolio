@@ -3,7 +3,7 @@ import theme from '../../theme';
 
 import { styled } from '@mui/system';
 
-import { Primary, Tools, ProjectManagement, Authentications, WebTech, BackEnd, FrontEnd, Languages, VersionControl, Databases, Cloud, Other, SoftSkills } from '../../lists/technologies';
+import { Primary, Tools, ProjectManagement, WebTech, BackEnd, FrontEnd, Languages, VersionControl, Databases, Other, SoftSkills } from '../../lists/technologies';
 
 import { IconBackdrop, IconButton } from '../StyledComps/StyledComps';
 import Container from '@mui/material/Container';
@@ -25,14 +25,12 @@ const techCategories = [
   { title: 'Primary Skills', list: Primary },
   { title: 'Tools', list: Tools },
   { title: 'Project Management', list: ProjectManagement },
-  { title: 'Authentications', list: Authentications },
   { title: 'Web Technologies and Protocols', list: WebTech },
   { title: 'Back End', list: BackEnd },
   { title: 'Front End', list: FrontEnd },
   { title: 'Languages', list: Languages },
   { title: 'Version Control', list: VersionControl },
-  { title: 'Databases', list: Databases },
-  { title: 'Cloud', list: Cloud },
+  { title: 'Cloud/ Databases', list: Databases },
   { title: 'Other', list: Other },
   { title: 'Soft Skills', list: SoftSkills },
 ];

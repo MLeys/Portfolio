@@ -112,10 +112,6 @@ export const ProjectManagement = [
   },
 ]
 
-export const Authentications = [
-
-]
-
 // Web technologies and protocols
 export const WebTech = [
   {
@@ -244,6 +240,11 @@ export const VersionControl = [
 
 export const Databases = [
   {
+    title: 'AWS',
+    level: 'Advanced Beginner',
+    url: `${BASEURL}amazonwebservices/amazonwebservices-original-wordmark.svg`
+  },
+  {
     title: 'Mongo DB',
     level: 'Intermediate',
     url: `${BASEURL}mongodb/mongodb-original-wordmark.svg`
@@ -265,13 +266,13 @@ export const Databases = [
   },
 ]
 
-export const Cloud = [
-  {
-    title: 'AWS',
-    level: 'Advanced Beginner',
-    url: `${BASEURL}amazonwebservices/amazonwebservices-original-wordmark.svg`
-  },
-]
+// export const Cloud = [
+//   {
+//     title: 'AWS',
+//     level: 'Advanced Beginner',
+//     url: `${BASEURL}amazonwebservices/amazonwebservices-original-wordmark.svg`
+//   },
+// ]
 
 export const Other = [
   {
@@ -293,7 +294,46 @@ export const Other = [
 
 export const SoftSkills = [
   {
-  title: 'Project Management'
+    title: 'Time and Project Management',
+    about: `Michael has shown an aptitude for organizing, managing, 
+      and overseeing projects efficiently, both in his roles as a software 
+      engineer and as the owner/operator of a residential painting company.`
+  },
+  {
+    title: 'Leadership',
+    about: `His ability to lead teams and manage complex projects is demonstrated throughout his professional experience. His time overseeing a residential painting company would have required strong leadership skills.`
+  },
+  {
+    title: 'Communication Skills',
+    about: `Michael's ability to effectively communicate is seen in his management roles, his interaction with third-party vendors, and in leading meetings and teams.`
+  },
+  {
+    title: 'Problem Solving and Analytical Skills',
+    about: `These are shown in his capacity to automate processes, increase productivity, and decrease defects and misapplication rates in his Applications Engineer role.`
+  },
+  {
+    title: 'Agility and Adaptability',
+    about: `This is demonstrated by his self-taught programming skills, implementation of complex algorithms, and the ability to stay up-to-date with emerging technologies.`
+  },
+  {
+    title: 'Team Collaboration',
+    about: `The ability to work well with others is evident in his team-based projects, and also in his role as owner/operator where he would need to collaborate with various stakeholders.`
+  },
+  {
+    title: 'Emotional Intelligence',
+    about: `Highlighted in his resume's summary, he shows an understanding of his own emotions and those of others. This is further demonstrated by his ability to cultivate meaningful relationships.`
+  },
+  {
+    title: 'Attention to Detail',
+    about: `His focus on creating custom algorithms, improving application functionality, and decreasing defects all show a strong attention to detail. `
+  },
+  {
+    title: 'Continuous Improvement',
+    about: `His commitment to staying up-to-date with emerging technologies and industry trends, as well as his pursuit of certifications and ongoing learning, show a drive for continuous improvement.`
+  },
+  {
+    title: 'Client Relationship Management',
+    about: `His experience managing customer expectations and achieving high satisfaction rates in his own business shows strong client relationship skills.`
   },
 
    
