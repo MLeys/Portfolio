@@ -126,6 +126,7 @@ export const IconBackdrop = styled('div')(({ theme }) => ({
   background: '#000',
   opacity: 0,
   transition: theme.transitions.create('opacity'),
+  borderRadius: 50,
 }));
 
 

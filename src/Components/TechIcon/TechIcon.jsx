@@ -3,6 +3,7 @@ import React from "react";
 import { IconBackdrop, IconButton } from '../StyledComps/StyledComps';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import Paper from '@mui/material/Paper';
 
 
 export default function TechIcon({ tech }) {
@@ -50,6 +51,10 @@ export default function TechIcon({ tech }) {
           <>
           <IconBackdrop className="iconBackdrop" />
           <Box
+            component={Paper}
+            elevation={15}
+            bgcolor={'transparent'}
+            borderRadius={50}
             sx={{
               position: 'absolute',
               left: 0,
@@ -84,14 +89,13 @@ export default function TechIcon({ tech }) {
               justifyContent: 'center',
               alignItems: 'center',
               display: 'flex',
-
+              
             }}
           />
           </>
         )}
         {hasImageError && (
           <Typography
-            
             sx={{
               position: 'absolute',
               fontSize: '1.2rem',
