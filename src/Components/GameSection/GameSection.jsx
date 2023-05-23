@@ -29,31 +29,38 @@ function GameSection() {
   }
 
   return (
-    <Grid container >
-      <Grid xs={12}>
-      <Typography 
-        id="games"
-        variant="h3" 
-        component="h2"
-        paddingTop={2}
-        paddingBottom={2}
-      >
-        Games
-      </Typography>
+    <Box bgcolor={'purple.dark'} >
+    <Grid container inHeight={500} pt={10} id='games'>
+      <Grid xs={12} >
+        <Typography 
+          variant="h3" 
+          component="h2"
+          paddingTop={2}
+          paddingBottom={2}
+        >
+          Games
+        </Typography>
       </Grid>
       <Grid xs={12} >
         {Games.map((game) => (
-          <Button 
+          <Button
             key={game.index} 
             variant="contained" 
             onClick={() => handleClick(game.index)}
-            sx={{ margin: 2, bgcolor: 'blueGray.dark', color: 'blueGray.contrastText'}}
+            sx={{ 
+              margin: 2, 
+              bgcolor: 'orange.dark', 
+              color: 'blueGray.contrastText',
+             '&:hover': {
+                bgcolor: 'orange.main'
+              }
+            }}
           >
             Play {game.title}
           </Button>
         ))}
       </Grid>
-      <Grid xs={12}>
+      <Grid xs={12} minHeight={480}>
         {selectedGame !== null && 
           <iframe
             src={Games[selectedGame].src}
@@ -65,6 +72,8 @@ function GameSection() {
         }
       </Grid>
     </Grid>
+  </Box>
+    
   );
 }
 
