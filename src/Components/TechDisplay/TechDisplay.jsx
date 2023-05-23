@@ -50,8 +50,8 @@ function TechDisplay() {
       </Typography>
 
       {techCategories.map((category, index) => (
-        <Box key={`category-${index}`} sx={{ mb: 4 }}>
-          <Card elevation={10} color="black" sx={{bgcolor: 'blueGrayLight.main', color: 'black'}}>
+        <Box key={`category-${index}`} sx={{ mb: 4}}>
+          <Card  elevation={10} color="black" sx={{ py: 2, bgcolor: 'blueGrayLight.main', color: 'black'}}>
             <SubTitle >
               {category.title}
             </SubTitle>
