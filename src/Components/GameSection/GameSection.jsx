@@ -29,8 +29,8 @@ function GameSection() {
   }
 
   return (
-    <Box >
-    <Grid container minHeight={600} pt={10} id='games' >
+    <Box component={Paper} bgcolor={'purple.dark'} elevation={16} mx={10} >
+    <Grid container minHeight={600} pt={1} id='games' >
       <Grid xs={12} >
         <Typography 
           variant="h3" 
