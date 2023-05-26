@@ -12,31 +12,31 @@ const Games = [
   {
     index: 0,
     title: "Pong",
-    src: "../src/Games/Pong/index.html",
+    src: '../../Games/Pong/index.html',
   },
   {
     index: 1,
     title: "Snake",
-    src: "../src/Games/snake_game/index.html",
+    src: "../../Games/snake_game/index.html",
   }
 ]
 
 function GameSection() {
-  const [selectedGame, setSelectedGame] = useState(null);
+  const [selectedGame, setSelectedGame] = useState(0);
 
   const handleClick = (gameIndex) => {
     setSelectedGame(gameIndex);
   }
 
   return (
-    <Box bgcolor={'purple.dark'} >
-    <Grid container inHeight={500} pt={10} id='games'>
+    <Box >
+    <Grid container minHeight={600} pt={10} id='games' >
       <Grid xs={12} >
         <Typography 
           variant="h3" 
           component="h2"
-          paddingTop={2}
-          paddingBottom={2}
+          pt={2}
+          pb={2}
         >
           Games
         </Typography>
@@ -60,7 +60,7 @@ function GameSection() {
           </Button>
         ))}
       </Grid>
-      <Grid xs={12} minHeight={480}>
+      <Grid className="GameDisplayWindow" xs={12} minHeight={500} pt={5} pb={10}>
         {selectedGame !== null && 
           <iframe
             src={Games[selectedGame].src}
