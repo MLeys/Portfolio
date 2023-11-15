@@ -25,7 +25,7 @@ export const Projects = [
   },
   {
     id: 2, 
-    title: "Pursuit of HappYness", 
+    title: "Pursuit of HealthYness", 
     about: "Patient first-app empowering users to manage and take charge of their own health",
     features: [ 
       "Intuitive Dashboard", 

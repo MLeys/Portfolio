@@ -22,7 +22,7 @@ const Games = [
 ]
 
 function GameSection() {
-  const [selectedGame, setSelectedGame] = useState(0);
+  const [selectedGame, setSelectedGame] = useState(1);
 
   const handleClick = (gameIndex) => {
     setSelectedGame(gameIndex);
